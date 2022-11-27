@@ -7,18 +7,109 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0AA962292D7AFA000DE1F1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AA961292D7AFA000DE1F1 /* Repository.swift */; };
+		4E1A8023292E9A8E00083707 /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A8022292E9A8E00083707 /* OptionView.swift */; };
+		4E1A8027292ED8B400083707 /* ProblemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A8026292ED8B400083707 /* ProblemView.swift */; };
+		4E1A8029292ED8C200083707 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A8028292ED8C200083707 /* InfoView.swift */; };
+		4E45AE0F2933A84A00E5DDD5 /* InfoPrep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE0E2933A84A00E5DDD5 /* InfoPrep.swift */; };
+		4E45AE112933A85900E5DDD5 /* InfoPraise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE102933A85900E5DDD5 /* InfoPraise.swift */; };
+		4E45AE132933A86800E5DDD5 /* InfoTimeOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE122933A86800E5DDD5 /* InfoTimeOut.swift */; };
+		4E45AE152933A87600E5DDD5 /* InfoAboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE142933A87600E5DDD5 /* InfoAboutUs.swift */; };
+		4E45AE172933A89200E5DDD5 /* Prep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE162933A89200E5DDD5 /* Prep1.swift */; };
+		4E45AE1A2933A8A900E5DDD5 /* Prep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE192933A8A900E5DDD5 /* Prep2.swift */; };
+		4E45AE1C2933A8B500E5DDD5 /* Prep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE1B2933A8B500E5DDD5 /* Prep3.swift */; };
+		4E45AE1F2933A8EA00E5DDD5 /* Praise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE1E2933A8EA00E5DDD5 /* Praise1.swift */; };
+		4E45AE222933A92500E5DDD5 /* Timeout1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE212933A92500E5DDD5 /* Timeout1.swift */; };
+		4E48E7DF29322D3900ED92C4 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48E7DE29322D3900ED92C4 /* TimerView.swift */; };
+		4E48E7E129322D5000ED92C4 /* BehaviourPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48E7E029322D5000ED92C4 /* BehaviourPromptView.swift */; };
+		4E48E7E52932321800ED92C4 /* Logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E48E7E42932321800ED92C4 /* Logo2.png */; };
 		4E4BC308292D703B00DD3BBC /* Smart_Time_OutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4BC307292D703B00DD3BBC /* Smart_Time_OutApp.swift */; };
 		4E4BC30A292D703B00DD3BBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4BC309292D703B00DD3BBC /* ContentView.swift */; };
 		4E4BC30C292D703B00DD3BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC30B292D703B00DD3BBC /* Assets.xcassets */; };
 		4E4BC30F292D703B00DD3BBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC30E292D703B00DD3BBC /* Preview Assets.xcassets */; };
+		4E4BC32A292D76C400DD3BBC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC31F292D76C400DD3BBC /* Roboto-Light.ttf */; };
+		4E4BC32B292D76C400DD3BBC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC320292D76C400DD3BBC /* Roboto-Regular.ttf */; };
+		4E4BC32C292D76C400DD3BBC /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC321292D76C400DD3BBC /* Roboto-MediumItalic.ttf */; };
+		4E4BC32D292D76C400DD3BBC /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC322292D76C400DD3BBC /* Roboto-ThinItalic.ttf */; };
+		4E4BC32E292D76C400DD3BBC /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC323292D76C400DD3BBC /* Roboto-BoldItalic.ttf */; };
+		4E4BC32F292D76C400DD3BBC /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC324292D76C400DD3BBC /* Roboto-LightItalic.ttf */; };
+		4E4BC330292D76C400DD3BBC /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC325292D76C400DD3BBC /* Roboto-Italic.ttf */; };
+		4E4BC331292D76C400DD3BBC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC326292D76C400DD3BBC /* LICENSE.txt */; };
+		4E4BC332292D76C400DD3BBC /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC327292D76C400DD3BBC /* Roboto-BlackItalic.ttf */; };
+		4E4BC333292D76C400DD3BBC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC328292D76C400DD3BBC /* Roboto-Thin.ttf */; };
+		4E4BC334292D76C400DD3BBC /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC329292D76C400DD3BBC /* Roboto-Black.ttf */; };
+		4E4BC349292D76D500DD3BBC /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC337292D76D500DD3BBC /* Nunito-ExtraBoldItalic.ttf */; };
+		4E4BC34A292D76D500DD3BBC /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC338292D76D500DD3BBC /* Nunito-ExtraBold.ttf */; };
+		4E4BC34B292D76D500DD3BBC /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC339292D76D500DD3BBC /* Nunito-ExtraLightItalic.ttf */; };
+		4E4BC34C292D76D500DD3BBC /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC33A292D76D500DD3BBC /* Nunito-Light.ttf */; };
+		4E4BC34D292D76D500DD3BBC /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC33B292D76D500DD3BBC /* Nunito-Regular.ttf */; };
+		4E4BC34E292D76D500DD3BBC /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC33C292D76D500DD3BBC /* Nunito-SemiBold.ttf */; };
+		4E4BC34F292D76D500DD3BBC /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC33D292D76D500DD3BBC /* Nunito-Bold.ttf */; };
+		4E4BC350292D76D500DD3BBC /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC33E292D76D500DD3BBC /* Nunito-BoldItalic.ttf */; };
+		4E4BC351292D76D500DD3BBC /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC33F292D76D500DD3BBC /* Nunito-Black.ttf */; };
+		4E4BC352292D76D500DD3BBC /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC340292D76D500DD3BBC /* Nunito-ExtraLight.ttf */; };
+		4E4BC353292D76D500DD3BBC /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC341292D76D500DD3BBC /* Nunito-SemiBoldItalic.ttf */; };
+		4E4BC354292D76D500DD3BBC /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC342292D76D500DD3BBC /* Nunito-BlackItalic.ttf */; };
+		4E4BC355292D76D500DD3BBC /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC343292D76D500DD3BBC /* Nunito-Italic.ttf */; };
+		4E4BC356292D76D500DD3BBC /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC344292D76D500DD3BBC /* Nunito-LightItalic.ttf */; };
+		4E4BC357292D76D500DD3BBC /* Nunito-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC345292D76D500DD3BBC /* Nunito-MediumItalic.ttf */; };
+		4E4BC358292D76D500DD3BBC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC346292D76D500DD3BBC /* OFL.txt */; };
+		4E4BC359292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC347292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf */; };
+		4E4BC35A292D76D500DD3BBC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC348292D76D500DD3BBC /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0AA961292D7AFA000DE1F1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		4E1A8022292E9A8E00083707 /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		4E1A8026292ED8B400083707 /* ProblemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemView.swift; sourceTree = "<group>"; };
+		4E1A8028292ED8C200083707 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		4E45AE0E2933A84A00E5DDD5 /* InfoPrep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPrep.swift; sourceTree = "<group>"; };
+		4E45AE102933A85900E5DDD5 /* InfoPraise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPraise.swift; sourceTree = "<group>"; };
+		4E45AE122933A86800E5DDD5 /* InfoTimeOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTimeOut.swift; sourceTree = "<group>"; };
+		4E45AE142933A87600E5DDD5 /* InfoAboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAboutUs.swift; sourceTree = "<group>"; };
+		4E45AE162933A89200E5DDD5 /* Prep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prep1.swift; sourceTree = "<group>"; };
+		4E45AE192933A8A900E5DDD5 /* Prep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prep2.swift; sourceTree = "<group>"; };
+		4E45AE1B2933A8B500E5DDD5 /* Prep3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prep3.swift; sourceTree = "<group>"; };
+		4E45AE1E2933A8EA00E5DDD5 /* Praise1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Praise1.swift; sourceTree = "<group>"; };
+		4E45AE212933A92500E5DDD5 /* Timeout1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeout1.swift; sourceTree = "<group>"; };
+		4E48E7DE29322D3900ED92C4 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		4E48E7E029322D5000ED92C4 /* BehaviourPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourPromptView.swift; sourceTree = "<group>"; };
+		4E48E7E42932321800ED92C4 /* Logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo2.png; sourceTree = "<group>"; };
 		4E4BC304292D703B00DD3BBC /* Smart Time Out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Time Out.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4BC307292D703B00DD3BBC /* Smart_Time_OutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Time_OutApp.swift; sourceTree = "<group>"; };
 		4E4BC309292D703B00DD3BBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E4BC30B292D703B00DD3BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E4BC30E292D703B00DD3BBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4E4BC31D292D71B000DD3BBC /* Smart-Time-Out-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Smart-Time-Out-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4E4BC31F292D76C400DD3BBC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4E4BC320292D76C400DD3BBC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4E4BC321292D76C400DD3BBC /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC322292D76C400DD3BBC /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC323292D76C400DD3BBC /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC324292D76C400DD3BBC /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC325292D76C400DD3BBC /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		4E4BC326292D76C400DD3BBC /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		4E4BC327292D76C400DD3BBC /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC328292D76C400DD3BBC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		4E4BC329292D76C400DD3BBC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		4E4BC337292D76D500DD3BBC /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC338292D76D500DD3BBC /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4E4BC339292D76D500DD3BBC /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC33A292D76D500DD3BBC /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		4E4BC33B292D76D500DD3BBC /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		4E4BC33C292D76D500DD3BBC /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		4E4BC33D292D76D500DD3BBC /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		4E4BC33E292D76D500DD3BBC /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC33F292D76D500DD3BBC /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		4E4BC340292D76D500DD3BBC /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4E4BC341292D76D500DD3BBC /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC342292D76D500DD3BBC /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC343292D76D500DD3BBC /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		4E4BC344292D76D500DD3BBC /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC345292D76D500DD3BBC /* Nunito-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4E4BC346292D76D500DD3BBC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4E4BC347292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		4E4BC348292D76D500DD3BBC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,9 +123,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E45AE0C2933A72600E5DDD5 /* InfoSection */ = {
+			isa = PBXGroup;
+			children = (
+				4E1A8028292ED8C200083707 /* InfoView.swift */,
+				4E45AE232933A95500E5DDD5 /* About */,
+				4E45AE202933A90200E5DDD5 /* Timeout */,
+				4E45AE1D2933A8BA00E5DDD5 /* Praise */,
+				4E45AE182933A89700E5DDD5 /* Prep */,
+			);
+			path = InfoSection;
+			sourceTree = "<group>";
+		};
+		4E45AE0D2933A74300E5DDD5 /* Timer Section */ = {
+			isa = PBXGroup;
+			children = (
+				4E48E7E029322D5000ED92C4 /* BehaviourPromptView.swift */,
+				4E48E7DE29322D3900ED92C4 /* TimerView.swift */,
+				4E1A8022292E9A8E00083707 /* OptionView.swift */,
+				4E1A8026292ED8B400083707 /* ProblemView.swift */,
+			);
+			path = "Timer Section";
+			sourceTree = "<group>";
+		};
+		4E45AE182933A89700E5DDD5 /* Prep */ = {
+			isa = PBXGroup;
+			children = (
+				4E45AE0E2933A84A00E5DDD5 /* InfoPrep.swift */,
+				4E45AE162933A89200E5DDD5 /* Prep1.swift */,
+				4E45AE192933A8A900E5DDD5 /* Prep2.swift */,
+				4E45AE1B2933A8B500E5DDD5 /* Prep3.swift */,
+			);
+			path = Prep;
+			sourceTree = "<group>";
+		};
+		4E45AE1D2933A8BA00E5DDD5 /* Praise */ = {
+			isa = PBXGroup;
+			children = (
+				4E45AE102933A85900E5DDD5 /* InfoPraise.swift */,
+				4E45AE1E2933A8EA00E5DDD5 /* Praise1.swift */,
+			);
+			path = Praise;
+			sourceTree = "<group>";
+		};
+		4E45AE202933A90200E5DDD5 /* Timeout */ = {
+			isa = PBXGroup;
+			children = (
+				4E45AE122933A86800E5DDD5 /* InfoTimeOut.swift */,
+				4E45AE212933A92500E5DDD5 /* Timeout1.swift */,
+			);
+			path = Timeout;
+			sourceTree = "<group>";
+		};
+		4E45AE232933A95500E5DDD5 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				4E45AE142933A87600E5DDD5 /* InfoAboutUs.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		4E4BC2FB292D703B00DD3BBC = {
 			isa = PBXGroup;
 			children = (
+				4E48E7E42932321800ED92C4 /* Logo2.png */,
 				4E4BC306292D703B00DD3BBC /* Smart Time Out */,
 				4E4BC305292D703B00DD3BBC /* Products */,
 			);
@@ -53,6 +205,11 @@
 			children = (
 				4E4BC307292D703B00DD3BBC /* Smart_Time_OutApp.swift */,
 				4E4BC309292D703B00DD3BBC /* ContentView.swift */,
+				4E45AE0D2933A74300E5DDD5 /* Timer Section */,
+				4E45AE0C2933A72600E5DDD5 /* InfoSection */,
+				4E7B6DCB292D7855008BEDA5 /* Fonts */,
+				4E4BC31D292D71B000DD3BBC /* Smart-Time-Out-Info.plist */,
+				4E0AA961292D7AFA000DE1F1 /* Repository.swift */,
 				4E4BC30B292D703B00DD3BBC /* Assets.xcassets */,
 				4E4BC30D292D703B00DD3BBC /* Preview Content */,
 			);
@@ -65,6 +222,66 @@
 				4E4BC30E292D703B00DD3BBC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4E4BC31E292D76C400DD3BBC /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				4E4BC31F292D76C400DD3BBC /* Roboto-Light.ttf */,
+				4E4BC320292D76C400DD3BBC /* Roboto-Regular.ttf */,
+				4E4BC321292D76C400DD3BBC /* Roboto-MediumItalic.ttf */,
+				4E4BC322292D76C400DD3BBC /* Roboto-ThinItalic.ttf */,
+				4E4BC323292D76C400DD3BBC /* Roboto-BoldItalic.ttf */,
+				4E4BC324292D76C400DD3BBC /* Roboto-LightItalic.ttf */,
+				4E4BC325292D76C400DD3BBC /* Roboto-Italic.ttf */,
+				4E4BC326292D76C400DD3BBC /* LICENSE.txt */,
+				4E4BC327292D76C400DD3BBC /* Roboto-BlackItalic.ttf */,
+				4E4BC328292D76C400DD3BBC /* Roboto-Thin.ttf */,
+				4E4BC329292D76C400DD3BBC /* Roboto-Black.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		4E4BC335292D76D500DD3BBC /* Nunito */ = {
+			isa = PBXGroup;
+			children = (
+				4E4BC336292D76D500DD3BBC /* static */,
+				4E4BC346292D76D500DD3BBC /* OFL.txt */,
+				4E4BC347292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf */,
+				4E4BC348292D76D500DD3BBC /* README.txt */,
+			);
+			path = Nunito;
+			sourceTree = "<group>";
+		};
+		4E4BC336292D76D500DD3BBC /* static */ = {
+			isa = PBXGroup;
+			children = (
+				4E4BC337292D76D500DD3BBC /* Nunito-ExtraBoldItalic.ttf */,
+				4E4BC338292D76D500DD3BBC /* Nunito-ExtraBold.ttf */,
+				4E4BC339292D76D500DD3BBC /* Nunito-ExtraLightItalic.ttf */,
+				4E4BC33A292D76D500DD3BBC /* Nunito-Light.ttf */,
+				4E4BC33B292D76D500DD3BBC /* Nunito-Regular.ttf */,
+				4E4BC33C292D76D500DD3BBC /* Nunito-SemiBold.ttf */,
+				4E4BC33D292D76D500DD3BBC /* Nunito-Bold.ttf */,
+				4E4BC33E292D76D500DD3BBC /* Nunito-BoldItalic.ttf */,
+				4E4BC33F292D76D500DD3BBC /* Nunito-Black.ttf */,
+				4E4BC340292D76D500DD3BBC /* Nunito-ExtraLight.ttf */,
+				4E4BC341292D76D500DD3BBC /* Nunito-SemiBoldItalic.ttf */,
+				4E4BC342292D76D500DD3BBC /* Nunito-BlackItalic.ttf */,
+				4E4BC343292D76D500DD3BBC /* Nunito-Italic.ttf */,
+				4E4BC344292D76D500DD3BBC /* Nunito-LightItalic.ttf */,
+				4E4BC345292D76D500DD3BBC /* Nunito-MediumItalic.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		4E7B6DCB292D7855008BEDA5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4E4BC335292D76D500DD3BBC /* Nunito */,
+				4E4BC31E292D76C400DD3BBC /* Roboto */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +342,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4BC32D292D76C400DD3BBC /* Roboto-ThinItalic.ttf in Resources */,
+				4E4BC330292D76C400DD3BBC /* Roboto-Italic.ttf in Resources */,
 				4E4BC30F292D703B00DD3BBC /* Preview Assets.xcassets in Resources */,
+				4E4BC34B292D76D500DD3BBC /* Nunito-ExtraLightItalic.ttf in Resources */,
+				4E4BC354292D76D500DD3BBC /* Nunito-BlackItalic.ttf in Resources */,
+				4E4BC34E292D76D500DD3BBC /* Nunito-SemiBold.ttf in Resources */,
+				4E4BC32F292D76C400DD3BBC /* Roboto-LightItalic.ttf in Resources */,
+				4E4BC34F292D76D500DD3BBC /* Nunito-Bold.ttf in Resources */,
+				4E4BC32C292D76C400DD3BBC /* Roboto-MediumItalic.ttf in Resources */,
+				4E4BC34D292D76D500DD3BBC /* Nunito-Regular.ttf in Resources */,
+				4E4BC350292D76D500DD3BBC /* Nunito-BoldItalic.ttf in Resources */,
+				4E4BC352292D76D500DD3BBC /* Nunito-ExtraLight.ttf in Resources */,
+				4E4BC349292D76D500DD3BBC /* Nunito-ExtraBoldItalic.ttf in Resources */,
+				4E4BC353292D76D500DD3BBC /* Nunito-SemiBoldItalic.ttf in Resources */,
 				4E4BC30C292D703B00DD3BBC /* Assets.xcassets in Resources */,
+				4E4BC332292D76C400DD3BBC /* Roboto-BlackItalic.ttf in Resources */,
+				4E4BC357292D76D500DD3BBC /* Nunito-MediumItalic.ttf in Resources */,
+				4E4BC32B292D76C400DD3BBC /* Roboto-Regular.ttf in Resources */,
+				4E48E7E52932321800ED92C4 /* Logo2.png in Resources */,
+				4E4BC358292D76D500DD3BBC /* OFL.txt in Resources */,
+				4E4BC333292D76C400DD3BBC /* Roboto-Thin.ttf in Resources */,
+				4E4BC35A292D76D500DD3BBC /* README.txt in Resources */,
+				4E4BC334292D76C400DD3BBC /* Roboto-Black.ttf in Resources */,
+				4E4BC355292D76D500DD3BBC /* Nunito-Italic.ttf in Resources */,
+				4E4BC359292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf in Resources */,
+				4E4BC32E292D76C400DD3BBC /* Roboto-BoldItalic.ttf in Resources */,
+				4E4BC351292D76D500DD3BBC /* Nunito-Black.ttf in Resources */,
+				4E4BC356292D76D500DD3BBC /* Nunito-LightItalic.ttf in Resources */,
+				4E4BC34A292D76D500DD3BBC /* Nunito-ExtraBold.ttf in Resources */,
+				4E4BC331292D76C400DD3BBC /* LICENSE.txt in Resources */,
+				4E4BC34C292D76D500DD3BBC /* Nunito-Light.ttf in Resources */,
+				4E4BC32A292D76C400DD3BBC /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +384,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E48E7DF29322D3900ED92C4 /* TimerView.swift in Sources */,
+				4E45AE1A2933A8A900E5DDD5 /* Prep2.swift in Sources */,
 				4E4BC30A292D703B00DD3BBC /* ContentView.swift in Sources */,
+				4E45AE172933A89200E5DDD5 /* Prep1.swift in Sources */,
+				4E45AE1C2933A8B500E5DDD5 /* Prep3.swift in Sources */,
+				4E45AE132933A86800E5DDD5 /* InfoTimeOut.swift in Sources */,
+				4E45AE152933A87600E5DDD5 /* InfoAboutUs.swift in Sources */,
+				4E1A8023292E9A8E00083707 /* OptionView.swift in Sources */,
 				4E4BC308292D703B00DD3BBC /* Smart_Time_OutApp.swift in Sources */,
+				4E1A8027292ED8B400083707 /* ProblemView.swift in Sources */,
+				4E1A8029292ED8C200083707 /* InfoView.swift in Sources */,
+				4E45AE0F2933A84A00E5DDD5 /* InfoPrep.swift in Sources */,
+				4E45AE112933A85900E5DDD5 /* InfoPraise.swift in Sources */,
+				4E45AE1F2933A8EA00E5DDD5 /* Praise1.swift in Sources */,
+				4E48E7E129322D5000ED92C4 /* BehaviourPromptView.swift in Sources */,
+				4E0AA962292D7AFA000DE1F1 /* Repository.swift in Sources */,
+				4E45AE222933A92500E5DDD5 /* Timeout1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +532,7 @@
 				DEVELOPMENT_TEAM = 8NM3N87CDW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Smart-Time-Out-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -284,7 +546,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,7 +561,7 @@
 				DEVELOPMENT_TEAM = 8NM3N87CDW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Smart-Time-Out-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -313,7 +575,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
