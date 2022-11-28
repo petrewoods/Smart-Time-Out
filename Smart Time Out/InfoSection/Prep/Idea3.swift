@@ -1,19 +1,20 @@
 //
-//  Prep3.swift
+//  Idea3.swift
 //  Smart Time Out
 //
-//  Created by Peter Woods on 27/11/2022.
+//  Created by Peter Woods on 28/11/2022.
 //
+
 
 import SwiftUI
 
-struct Prep3: View {
+struct Idea3: View {
     var body: some View {
           ZStack{
             VStack{
                 HStack{
                 
-                    Text("Explain time out \nto your child so \nthey know what \nto expect")
+                    Text("Praise something good about the conversation")
                         .font(.custom("Roboto-Regular", size: 38))
                         .foregroundColor(text1)
                         .multilineTextAlignment(.leading)
@@ -21,29 +22,22 @@ struct Prep3: View {
                 Spacer()
                 Spacer()
                 }
+                Spacer()
                
+                HStack{
+                
+                    Text("You could praise \n  Careful listening \n  Paying attention \n  Good ideas")
+                        .font(.custom("Roboto-Nunito", size: 28))
+                        .foregroundColor(text1)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal, 20.0)
+                Spacer()
+                Spacer()
+                }
                     
                 Spacer()
   //                     .font(.custom("Nunito-Regular", size: 32))
   //
-                
-                //button
-                NavigationLink(destination: Prep4())
-                {
-                Text("Continue")
-                   .foregroundColor(.white)
-                   .fontWeight(.medium)
-                   .multilineTextAlignment(.center)
-                   .font(.custom("Nunito-Regular", size: 28))
-                   .padding(.all, 20.0)
-                   .background(col1)
-                   .background(RoundedRectangle(cornerRadius: 32)
-                       .clipped())
-                   .clipShape(RoundedRectangle(cornerRadius: 32))
-                }
-                
-                
-                
                 
                 
                 HStack{

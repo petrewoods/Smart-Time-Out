@@ -18,7 +18,7 @@
 		4E45AE172933A89200E5DDD5 /* Prep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE162933A89200E5DDD5 /* Prep1.swift */; };
 		4E45AE1A2933A8A900E5DDD5 /* Prep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE192933A8A900E5DDD5 /* Prep2.swift */; };
 		4E45AE1C2933A8B500E5DDD5 /* Prep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE1B2933A8B500E5DDD5 /* Prep3.swift */; };
-		4E45AE1F2933A8EA00E5DDD5 /* Praise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE1E2933A8EA00E5DDD5 /* Praise1.swift */; };
+		4E45AE1F2933A8EA00E5DDD5 /* Praisedelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE1E2933A8EA00E5DDD5 /* Praisedelay.swift */; };
 		4E45AE222933A92500E5DDD5 /* Timeout1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45AE212933A92500E5DDD5 /* Timeout1.swift */; };
 		4E48E7DF29322D3900ED92C4 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48E7DE29322D3900ED92C4 /* TimerView.swift */; };
 		4E48E7E129322D5000ED92C4 /* BehaviourPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48E7E029322D5000ED92C4 /* BehaviourPromptView.swift */; };
@@ -56,6 +56,23 @@
 		4E4BC358292D76D500DD3BBC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC346292D76D500DD3BBC /* OFL.txt */; };
 		4E4BC359292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC347292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf */; };
 		4E4BC35A292D76D500DD3BBC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E4BC348292D76D500DD3BBC /* README.txt */; };
+		4E9495A02933E7630024722A /* WhichPraise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94959F2933E7630024722A /* WhichPraise.swift */; };
+		4E9495A22933E7960024722A /* PraiseGenerous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9495A12933E7960024722A /* PraiseGenerous.swift */; };
+		4E9495A42933E7A50024722A /* PraiseSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9495A32933E7A50024722A /* PraiseSmall.swift */; };
+		4E9495A62933E7AD0024722A /* PraiseWhy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9495A52933E7AD0024722A /* PraiseWhy.swift */; };
+		4E9495A82933E7B80024722A /* Praise Specific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9495A72933E7B80024722A /* Praise Specific.swift */; };
+		4EF42C862935311E0044D133 /* Explain1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C852935311E0044D133 /* Explain1.swift */; };
+		4EF42C88293531280044D133 /* Explain2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C87293531280044D133 /* Explain2.swift */; };
+		4EF42C8A293531370044D133 /* Explain3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C89293531370044D133 /* Explain3.swift */; };
+		4EF42C8E293531C50044D133 /* Prep4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C8D293531C50044D133 /* Prep4.swift */; };
+		4EF42C9029353E510044D133 /* Idea1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C8F29353E510044D133 /* Idea1.swift */; };
+		4EF42C9229353E5A0044D133 /* Idea2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C9129353E5A0044D133 /* Idea2.swift */; };
+		4EF42C9429353E610044D133 /* Idea3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C9329353E610044D133 /* Idea3.swift */; };
+		4EF42C9629353F480044D133 /* Idea4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF42C9529353F480044D133 /* Idea4.swift */; };
+		4EF42C99293552DC0044D133 /* Praise1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF42C98293552DC0044D133 /* Praise1.png */; };
+		4EF42C9B293553170044D133 /* Specific1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF42C9A293553170044D133 /* Specific1.png */; };
+		4EF42C9D2935531C0044D133 /* Small1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF42C9C2935531C0044D133 /* Small1.png */; };
+		4EF42C9F293553210044D133 /* Delay1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF42C9E293553210044D133 /* Delay1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +87,7 @@
 		4E45AE162933A89200E5DDD5 /* Prep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prep1.swift; sourceTree = "<group>"; };
 		4E45AE192933A8A900E5DDD5 /* Prep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prep2.swift; sourceTree = "<group>"; };
 		4E45AE1B2933A8B500E5DDD5 /* Prep3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prep3.swift; sourceTree = "<group>"; };
-		4E45AE1E2933A8EA00E5DDD5 /* Praise1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Praise1.swift; sourceTree = "<group>"; };
+		4E45AE1E2933A8EA00E5DDD5 /* Praisedelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Praisedelay.swift; sourceTree = "<group>"; };
 		4E45AE212933A92500E5DDD5 /* Timeout1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeout1.swift; sourceTree = "<group>"; };
 		4E48E7DE29322D3900ED92C4 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		4E48E7E029322D5000ED92C4 /* BehaviourPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourPromptView.swift; sourceTree = "<group>"; };
@@ -110,6 +127,23 @@
 		4E4BC346292D76D500DD3BBC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4E4BC347292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		4E4BC348292D76D500DD3BBC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		4E94959F2933E7630024722A /* WhichPraise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichPraise.swift; sourceTree = "<group>"; };
+		4E9495A12933E7960024722A /* PraiseGenerous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraiseGenerous.swift; sourceTree = "<group>"; };
+		4E9495A32933E7A50024722A /* PraiseSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraiseSmall.swift; sourceTree = "<group>"; };
+		4E9495A52933E7AD0024722A /* PraiseWhy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraiseWhy.swift; sourceTree = "<group>"; };
+		4E9495A72933E7B80024722A /* Praise Specific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Praise Specific.swift"; sourceTree = "<group>"; };
+		4EF42C852935311E0044D133 /* Explain1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explain1.swift; sourceTree = "<group>"; };
+		4EF42C87293531280044D133 /* Explain2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explain2.swift; sourceTree = "<group>"; };
+		4EF42C89293531370044D133 /* Explain3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explain3.swift; sourceTree = "<group>"; };
+		4EF42C8D293531C50044D133 /* Prep4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prep4.swift; sourceTree = "<group>"; };
+		4EF42C8F29353E510044D133 /* Idea1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea1.swift; sourceTree = "<group>"; };
+		4EF42C9129353E5A0044D133 /* Idea2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea2.swift; sourceTree = "<group>"; };
+		4EF42C9329353E610044D133 /* Idea3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea3.swift; sourceTree = "<group>"; };
+		4EF42C9529353F480044D133 /* Idea4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea4.swift; sourceTree = "<group>"; };
+		4EF42C98293552DC0044D133 /* Praise1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Praise1.png; sourceTree = "<group>"; };
+		4EF42C9A293553170044D133 /* Specific1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Specific1.png; sourceTree = "<group>"; };
+		4EF42C9C2935531C0044D133 /* Small1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Small1.png; sourceTree = "<group>"; };
+		4EF42C9E293553210044D133 /* Delay1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delay1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +187,14 @@
 				4E45AE162933A89200E5DDD5 /* Prep1.swift */,
 				4E45AE192933A8A900E5DDD5 /* Prep2.swift */,
 				4E45AE1B2933A8B500E5DDD5 /* Prep3.swift */,
+				4EF42C8D293531C50044D133 /* Prep4.swift */,
+				4EF42C852935311E0044D133 /* Explain1.swift */,
+				4EF42C87293531280044D133 /* Explain2.swift */,
+				4EF42C89293531370044D133 /* Explain3.swift */,
+				4EF42C8F29353E510044D133 /* Idea1.swift */,
+				4EF42C9129353E5A0044D133 /* Idea2.swift */,
+				4EF42C9329353E610044D133 /* Idea3.swift */,
+				4EF42C9529353F480044D133 /* Idea4.swift */,
 			);
 			path = Prep;
 			sourceTree = "<group>";
@@ -161,7 +203,12 @@
 			isa = PBXGroup;
 			children = (
 				4E45AE102933A85900E5DDD5 /* InfoPraise.swift */,
-				4E45AE1E2933A8EA00E5DDD5 /* Praise1.swift */,
+				4E45AE1E2933A8EA00E5DDD5 /* Praisedelay.swift */,
+				4E9495A52933E7AD0024722A /* PraiseWhy.swift */,
+				4E9495A32933E7A50024722A /* PraiseSmall.swift */,
+				4E9495A72933E7B80024722A /* Praise Specific.swift */,
+				4E9495A12933E7960024722A /* PraiseGenerous.swift */,
+				4E94959F2933E7630024722A /* WhichPraise.swift */,
 			);
 			path = Praise;
 			sourceTree = "<group>";
@@ -186,7 +233,6 @@
 		4E4BC2FB292D703B00DD3BBC = {
 			isa = PBXGroup;
 			children = (
-				4E48E7E42932321800ED92C4 /* Logo2.png */,
 				4E4BC306292D703B00DD3BBC /* Smart Time Out */,
 				4E4BC305292D703B00DD3BBC /* Products */,
 			);
@@ -211,6 +257,7 @@
 				4E4BC31D292D71B000DD3BBC /* Smart-Time-Out-Info.plist */,
 				4E0AA961292D7AFA000DE1F1 /* Repository.swift */,
 				4E4BC30B292D703B00DD3BBC /* Assets.xcassets */,
+				4EF42C97293552CD0044D133 /* Images */,
 				4E4BC30D292D703B00DD3BBC /* Preview Content */,
 			);
 			path = "Smart Time Out";
@@ -284,6 +331,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		4EF42C97293552CD0044D133 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4EF42C9A293553170044D133 /* Specific1.png */,
+				4EF42C9C2935531C0044D133 /* Small1.png */,
+				4EF42C9E293553210044D133 /* Delay1.png */,
+				4EF42C98293552DC0044D133 /* Praise1.png */,
+				4E48E7E42932321800ED92C4 /* Logo2.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,13 +408,16 @@
 				4E4BC354292D76D500DD3BBC /* Nunito-BlackItalic.ttf in Resources */,
 				4E4BC34E292D76D500DD3BBC /* Nunito-SemiBold.ttf in Resources */,
 				4E4BC32F292D76C400DD3BBC /* Roboto-LightItalic.ttf in Resources */,
+				4EF42C9D2935531C0044D133 /* Small1.png in Resources */,
 				4E4BC34F292D76D500DD3BBC /* Nunito-Bold.ttf in Resources */,
+				4EF42C9F293553210044D133 /* Delay1.png in Resources */,
 				4E4BC32C292D76C400DD3BBC /* Roboto-MediumItalic.ttf in Resources */,
 				4E4BC34D292D76D500DD3BBC /* Nunito-Regular.ttf in Resources */,
 				4E4BC350292D76D500DD3BBC /* Nunito-BoldItalic.ttf in Resources */,
 				4E4BC352292D76D500DD3BBC /* Nunito-ExtraLight.ttf in Resources */,
 				4E4BC349292D76D500DD3BBC /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				4E4BC353292D76D500DD3BBC /* Nunito-SemiBoldItalic.ttf in Resources */,
+				4EF42C9B293553170044D133 /* Specific1.png in Resources */,
 				4E4BC30C292D703B00DD3BBC /* Assets.xcassets in Resources */,
 				4E4BC332292D76C400DD3BBC /* Roboto-BlackItalic.ttf in Resources */,
 				4E4BC357292D76D500DD3BBC /* Nunito-MediumItalic.ttf in Resources */,
@@ -367,6 +429,7 @@
 				4E4BC334292D76C400DD3BBC /* Roboto-Black.ttf in Resources */,
 				4E4BC355292D76D500DD3BBC /* Nunito-Italic.ttf in Resources */,
 				4E4BC359292D76D500DD3BBC /* Nunito-Italic-VariableFont_wght.ttf in Resources */,
+				4EF42C99293552DC0044D133 /* Praise1.png in Resources */,
 				4E4BC32E292D76C400DD3BBC /* Roboto-BoldItalic.ttf in Resources */,
 				4E4BC351292D76D500DD3BBC /* Nunito-Black.ttf in Resources */,
 				4E4BC356292D76D500DD3BBC /* Nunito-LightItalic.ttf in Resources */,
@@ -384,21 +447,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF42C9029353E510044D133 /* Idea1.swift in Sources */,
 				4E48E7DF29322D3900ED92C4 /* TimerView.swift in Sources */,
+				4E9495A42933E7A50024722A /* PraiseSmall.swift in Sources */,
+				4E9495A02933E7630024722A /* WhichPraise.swift in Sources */,
+				4EF42C8A293531370044D133 /* Explain3.swift in Sources */,
 				4E45AE1A2933A8A900E5DDD5 /* Prep2.swift in Sources */,
 				4E4BC30A292D703B00DD3BBC /* ContentView.swift in Sources */,
 				4E45AE172933A89200E5DDD5 /* Prep1.swift in Sources */,
+				4EF42C8E293531C50044D133 /* Prep4.swift in Sources */,
 				4E45AE1C2933A8B500E5DDD5 /* Prep3.swift in Sources */,
 				4E45AE132933A86800E5DDD5 /* InfoTimeOut.swift in Sources */,
 				4E45AE152933A87600E5DDD5 /* InfoAboutUs.swift in Sources */,
 				4E1A8023292E9A8E00083707 /* OptionView.swift in Sources */,
 				4E4BC308292D703B00DD3BBC /* Smart_Time_OutApp.swift in Sources */,
 				4E1A8027292ED8B400083707 /* ProblemView.swift in Sources */,
+				4EF42C9629353F480044D133 /* Idea4.swift in Sources */,
+				4EF42C9229353E5A0044D133 /* Idea2.swift in Sources */,
 				4E1A8029292ED8C200083707 /* InfoView.swift in Sources */,
+				4E9495A22933E7960024722A /* PraiseGenerous.swift in Sources */,
+				4E9495A82933E7B80024722A /* Praise Specific.swift in Sources */,
 				4E45AE0F2933A84A00E5DDD5 /* InfoPrep.swift in Sources */,
 				4E45AE112933A85900E5DDD5 /* InfoPraise.swift in Sources */,
-				4E45AE1F2933A8EA00E5DDD5 /* Praise1.swift in Sources */,
+				4E45AE1F2933A8EA00E5DDD5 /* Praisedelay.swift in Sources */,
+				4E9495A62933E7AD0024722A /* PraiseWhy.swift in Sources */,
 				4E48E7E129322D5000ED92C4 /* BehaviourPromptView.swift in Sources */,
+				4EF42C9429353E610044D133 /* Idea3.swift in Sources */,
+				4EF42C88293531280044D133 /* Explain2.swift in Sources */,
+				4EF42C862935311E0044D133 /* Explain1.swift in Sources */,
 				4E0AA962292D7AFA000DE1F1 /* Repository.swift in Sources */,
 				4E45AE222933A92500E5DDD5 /* Timeout1.swift in Sources */,
 			);
@@ -526,13 +602,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Smart Time Out/Preview Content\"";
-				DEVELOPMENT_TEAM = 8NM3N87CDW;
+				DEVELOPMENT_TEAM = J75K8GALPB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Smart-Time-Out-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Smart Time Out beta";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -541,8 +619,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Smartnav.Smart-Time-Out";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Smart-Time-Out-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -555,13 +633,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Smart Time Out/Preview Content\"";
-				DEVELOPMENT_TEAM = 8NM3N87CDW;
+				DEVELOPMENT_TEAM = J75K8GALPB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Smart-Time-Out-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Smart Time Out beta";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -570,8 +650,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Smartnav.Smart-Time-Out";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Smart-Time-Out-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

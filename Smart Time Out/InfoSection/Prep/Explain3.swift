@@ -1,64 +1,67 @@
 //
-//  Prep2.swift
+//  Explain3.swift
 //  Smart Time Out
 //
-//  Created by Peter Woods on 27/11/2022.
+//  Created by Peter Woods on 28/11/2022.
 //
+
 import SwiftUI
 
-struct Prep2: View {
+struct Explain3: View {
     
         var body: some View {
-        Tell0()
+            Explainchecklist3()
         }
     }
 
 
-    struct Tell0: View {
+    struct Explainchecklist3: View {
         @State private var isOne: Bool = false
         @State private var isTwo: Bool = false
         @State private var isThree: Bool = false
         @State private var isFour: Bool = false
-        @State private var isFive: Bool = false
-        @State private var isSix: Bool = false
+        
         
         var body: some View {
             
             ZStack{
                 VStack{
                     //title
-                    HStack{
-                        Text("Use this checklist \nto score your \ntime out chair")
+                    
+                    
+                        Text("Ask your child the following questions")
                             .font(.custom("Roboto-Regular", size: 32))
                             .foregroundColor(text1)
                             .multilineTextAlignment(.leading)
                             .padding(.horizontal, 20.0)
-                    Spacer()
-                    
-                    }
-                    
+                  
                     //toggles
                     
                     Group{
                         
                        
-                        Toggle("I will know if they run away",isOn: $isOne)
+                        Toggle("How do they like to calm down",isOn: $isOne)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal,20)
                             .tint(col1)
                         
-                      
                         //Text(isOne ? "ON": "Off")
+                    }
+                    NavigationLink(destination: Idea4())
+                    {
+                    Image(systemName: "lightbulb")
+                        .font(.largeTitle)
+                        .foregroundColor(.blue)
+                        .multilineTextAlignment(.leading)
                     }
                     
                     Group{
                         
-                       
-                        Toggle("They can't see other children",isOn: $isTwo)
+                        Toggle("Can they explain time out back to you",isOn: $isTwo)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal,20)
                             .tint(col1)
@@ -70,9 +73,9 @@ struct Prep2: View {
                     Group{
                         
                        
-                        Toggle("Child can't knock chair over",isOn: $isThree)
+                        Toggle("Do they have any worries or questions",isOn: $isThree)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal, 20)
                             .tint(col1)
@@ -84,58 +87,41 @@ struct Prep2: View {
                     Group{
                         
                         
-                        Toggle("Nothing dangerous nearby",isOn: $isFour)
+                        Toggle("Praise something good about the conversaion",isOn: $isFour)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal,20)
                             .tint(col1)
                         
                        
-                        //Text(isFour ? "ON": "Off")
+                       
+                    }
+                    NavigationLink(destination: Idea3())
+                    {
+                    Image(systemName: "lightbulb")
+                        .font(.largeTitle)
+                        .foregroundColor(.blue)
+                        .multilineTextAlignment(.leading)
                     }
                     
-                    Group{
                         
-                        
-                        Toggle("No toys nearby",isOn: $isFive)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
-                            .foregroundColor(text1)
-                            .padding(.horizontal,20)
-                            .tint(col1)
-                        
-                        
-                        //Text(isFour ? "ON": "Off")
-                    }
-                    Group{
-                        
-                        
-                        Toggle("One calming thing nearby",isOn: $isSix)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
-                            .foregroundColor(text1)
-                            .padding(.horizontal,20)
-                            .tint(col1)
-                   
-                        //Text(isFive ? "ON": "Off")
-                    }
+                    
                     Spacer()
+                    
                    
                     if(isOne == true &&
                        isTwo == true &&
                        isThree == true &&
-                       isFour == true &&
-                       isFive == true &&
-                       isSix == true ){
+                       isFour == true ){
                         NavigationLink(destination: InfoView())
                         {
                             
-                        Text("Done")
+                        Text("Well done for for finishing up")
                            .foregroundColor(.white)
                            .fontWeight(.medium)
                            .multilineTextAlignment(.center)
-                           .font(.custom("Nunito-Regular", size: 32))
+                           .font(.custom("Nunito-Regular", size: 22))
                            .padding(.all, 30.0)
                            .background(col1)
                            .background(RoundedRectangle(cornerRadius: 32)
@@ -148,20 +134,9 @@ struct Prep2: View {
                         Spacer()
                         
                         //button is hidden but is actually there but unclickable to preserve formatting
-                            Text("Done")
-                               .foregroundColor(.white)
-                               .fontWeight(.medium)
-                               .multilineTextAlignment(.center)
-                               .font(.custom("Nunito-Regular", size: 32))
-                               .padding(.all, 30.0)
-                               .background(.white)
-                               .background(RoundedRectangle(cornerRadius: 32)
-                                   .clipped())
-                               .foregroundColor(.white)
-                               .clipShape(RoundedRectangle(cornerRadius: 32))
+                            
                         
                     }
-                    
                     HStack{
                     Spacer()
                     Spacer()
@@ -173,8 +148,8 @@ struct Prep2: View {
                     
                     }
                 }
-                
-        }
-    
+    }
+        
+
 
 

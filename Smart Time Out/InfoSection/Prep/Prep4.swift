@@ -1,19 +1,23 @@
 //
-//  Prep3.swift
+//  Prep4.swift
 //  Smart Time Out
 //
-//  Created by Peter Woods on 27/11/2022.
+//  Created by Peter Woods on 28/11/2022.
 //
-
 import SwiftUI
 
-struct Prep3: View {
+
+
+struct Prep4: View {
+    
+    
+    
     var body: some View {
           ZStack{
             VStack{
                 HStack{
                 
-                    Text("Explain time out \nto your child so \nthey know what \nto expect")
+                    Text("Use this checklist \nwhile you explain \ntime out so \nyou don't \nmiss anything")
                         .font(.custom("Roboto-Regular", size: 38))
                         .foregroundColor(text1)
                         .multilineTextAlignment(.leading)
@@ -28,7 +32,7 @@ struct Prep3: View {
   //
                 
                 //button
-                NavigationLink(destination: Prep4())
+                NavigationLink(destination: Explain1())
                 {
                 Text("Continue")
                    .foregroundColor(.white)

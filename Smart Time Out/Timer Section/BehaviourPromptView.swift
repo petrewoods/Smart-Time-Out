@@ -21,7 +21,7 @@ struct BehaviourPromtView: View {
           HStack{
               Spacer()
               Text("\"If you don't follow \nthe instructions then \nyou will have \nto go into \ntime out\"")
-                  .font(.custom("Roboto-Regular", size: 32))
+                  .font(.custom("Roboto-Regular", size: 28))
                   .foregroundColor(text1)
                   .multilineTextAlignment(.leading)
               

@@ -1,64 +1,60 @@
 //
-//  Prep2.swift
+//  Explain2.swift
 //  Smart Time Out
 //
-//  Created by Peter Woods on 27/11/2022.
+//  Created by Peter Woods on 28/11/2022.
 //
+
 import SwiftUI
 
-struct Prep2: View {
+struct Explain2: View {
     
         var body: some View {
-        Tell0()
+            Explainchecklist2()
         }
     }
 
 
-    struct Tell0: View {
+    struct Explainchecklist2: View {
         @State private var isOne: Bool = false
         @State private var isTwo: Bool = false
         @State private var isThree: Bool = false
         @State private var isFour: Bool = false
-        @State private var isFive: Bool = false
-        @State private var isSix: Bool = false
+        
         
         var body: some View {
             
             ZStack{
                 VStack{
                     //title
-                    HStack{
-                        Text("Use this checklist \nto score your \ntime out chair")
+                    
+                    
+                        Text("Explain the following")
                             .font(.custom("Roboto-Regular", size: 32))
                             .foregroundColor(text1)
                             .multilineTextAlignment(.leading)
                             .padding(.horizontal, 20.0)
-                    Spacer()
-                    
-                    }
                     
                     //toggles
                     
                     Group{
                         
                        
-                        Toggle("I will know if they run away",isOn: $isOne)
+                        Toggle("When they need to calm down you will ask them to go to time out",isOn: $isOne)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal,20)
                             .tint(col1)
                         
-                      
                         //Text(isOne ? "ON": "Off")
                     }
                     
                     Group{
                         
-                       
-                        Toggle("They can't see other children",isOn: $isTwo)
+                        Toggle("You will time them and let them know when they are done",isOn: $isTwo)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal,20)
                             .tint(col1)
@@ -70,9 +66,9 @@ struct Prep2: View {
                     Group{
                         
                        
-                        Toggle("Child can't knock chair over",isOn: $isThree)
+                        Toggle("Everyone will leave them alone",isOn: $isThree)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal, 20)
                             .tint(col1)
@@ -84,58 +80,35 @@ struct Prep2: View {
                     Group{
                         
                         
-                        Toggle("Nothing dangerous nearby",isOn: $isFour)
+                        Toggle("If they can't sit quietly they might need longer to calm down",isOn: $isFour)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
+                            .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)
                             .padding(.horizontal,20)
                             .tint(col1)
                         
                        
-                        //Text(isFour ? "ON": "Off")
+                       
                     }
                     
-                    Group{
+                    
                         
-                        
-                        Toggle("No toys nearby",isOn: $isFive)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
-                            .foregroundColor(text1)
-                            .padding(.horizontal,20)
-                            .tint(col1)
-                        
-                        
-                        //Text(isFour ? "ON": "Off")
-                    }
-                    Group{
-                        
-                        
-                        Toggle("One calming thing nearby",isOn: $isSix)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 24))
-                            .foregroundColor(text1)
-                            .padding(.horizontal,20)
-                            .tint(col1)
-                   
-                        //Text(isFive ? "ON": "Off")
-                    }
+                    
                     Spacer()
+                    
                    
                     if(isOne == true &&
                        isTwo == true &&
                        isThree == true &&
-                       isFour == true &&
-                       isFive == true &&
-                       isSix == true ){
-                        NavigationLink(destination: InfoView())
+                       isFour == true ){
+                        NavigationLink(destination: Explain3())
                         {
                             
-                        Text("Done")
+                        Text("Well done for explaining")
                            .foregroundColor(.white)
                            .fontWeight(.medium)
                            .multilineTextAlignment(.center)
-                           .font(.custom("Nunito-Regular", size: 32))
+                           .font(.custom("Nunito-Regular", size: 28))
                            .padding(.all, 30.0)
                            .background(col1)
                            .background(RoundedRectangle(cornerRadius: 32)
@@ -148,11 +121,11 @@ struct Prep2: View {
                         Spacer()
                         
                         //button is hidden but is actually there but unclickable to preserve formatting
-                            Text("Done")
+                            Text("Well done for explaining")
                                .foregroundColor(.white)
                                .fontWeight(.medium)
                                .multilineTextAlignment(.center)
-                               .font(.custom("Nunito-Regular", size: 32))
+                               .font(.custom("Nunito-Regular", size: 28))
                                .padding(.all, 30.0)
                                .background(.white)
                                .background(RoundedRectangle(cornerRadius: 32)
@@ -161,7 +134,6 @@ struct Prep2: View {
                                .clipShape(RoundedRectangle(cornerRadius: 32))
                         
                     }
-                    
                     HStack{
                     Spacer()
                     Spacer()
@@ -173,8 +145,8 @@ struct Prep2: View {
                     
                     }
                 }
-                
-        }
-    
+    }
+        
+
 
 

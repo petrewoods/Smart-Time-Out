@@ -1,5 +1,5 @@
 //
-//  InfoPraise.swift
+//  WhichPraise.swift
 //  Smart Time Out
 //
 //  Created by Peter Woods on 27/11/2022.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct InfoPraise: View {
+struct WhichPraise: View {
   var body: some View {
         ZStack{
           VStack{
               HStack{
               
-                  Text("Time out only \nworks if you \nencourge good \nbehaviour too!")
-                      .font(.custom("Roboto-Regular", size: 38))
+                  Text("There are lots of aspects to good praise")
+                      .font(.custom("Roboto-Regular", size: 32))
                       .foregroundColor(text1)
                       .multilineTextAlignment(.leading)
                       .padding(.horizontal, 20.0)
@@ -28,9 +28,9 @@ struct InfoPraise: View {
 //
               
               //button
-              NavigationLink(destination: WhichPraise())
+              NavigationLink(destination: Praisedelay())
               {
-              Text("Tell me \nabout praise")
+              Text("Don't Delay")
                  .foregroundColor(.white)
                  .fontWeight(.medium)
                  .multilineTextAlignment(.center)
@@ -42,9 +42,37 @@ struct InfoPraise: View {
                  .clipShape(RoundedRectangle(cornerRadius: 32))
               }
               
-              NavigationLink(destination: PraiseWhy())
+              NavigationLink(destination: PraiseGenerous())
               {
-              Text("Why Praise?")
+              Text("Be Generous")
+                 .foregroundColor(.white)
+                 .fontWeight(.medium)
+                 .multilineTextAlignment(.center)
+                 .font(.custom("Nunito-Regular", size: 28))
+                 .padding(.all, 20.0)
+                 .background(col1)
+                 .background(RoundedRectangle(cornerRadius: 32)
+                     .clipped())
+                 .clipShape(RoundedRectangle(cornerRadius: 32))
+              }
+              
+              NavigationLink(destination: PraiseSmall())
+              {
+              Text("Start Small")
+                 .foregroundColor(.white)
+                 .fontWeight(.medium)
+                 .multilineTextAlignment(.center)
+                 .font(.custom("Nunito-Regular", size: 28))
+                 .padding(.all, 20.0)
+                 .background(col1)
+                 .background(RoundedRectangle(cornerRadius: 32)
+                     .clipped())
+                 .clipShape(RoundedRectangle(cornerRadius: 32))
+              }
+              
+              NavigationLink(destination: PraiseSpecific())
+              {
+              Text("Be Specific")
                  .foregroundColor(.white)
                  .fontWeight(.medium)
                  .multilineTextAlignment(.center)
