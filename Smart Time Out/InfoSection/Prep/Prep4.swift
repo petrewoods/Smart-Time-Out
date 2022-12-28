@@ -53,7 +53,10 @@ struct Prep4: View {
                 HStack{
                 Spacer()
                 Spacer()
-                Image("Logo2 1")
+                    Image("Logo2 1")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
                 }
                 
                

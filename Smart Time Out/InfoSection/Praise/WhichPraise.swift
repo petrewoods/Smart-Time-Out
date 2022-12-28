@@ -14,7 +14,7 @@ struct WhichPraise: View {
               HStack{
               
                   Text("There are lots of aspects to good praise")
-                      .font(.custom("Roboto-Regular", size: 32))
+                      .font(.custom("Roboto-Regular", size: 28))
                       .foregroundColor(text1)
                       .multilineTextAlignment(.leading)
                       .padding(.horizontal, 20.0)
@@ -34,7 +34,7 @@ struct WhichPraise: View {
                  .foregroundColor(.white)
                  .fontWeight(.medium)
                  .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 28))
+                 .font(.custom("Nunito-Regular", size: 24))
                  .padding(.all, 20.0)
                  .background(col1)
                  .background(RoundedRectangle(cornerRadius: 32)
@@ -48,7 +48,7 @@ struct WhichPraise: View {
                  .foregroundColor(.white)
                  .fontWeight(.medium)
                  .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 28))
+                 .font(.custom("Nunito-Regular", size: 24))
                  .padding(.all, 20.0)
                  .background(col1)
                  .background(RoundedRectangle(cornerRadius: 32)
@@ -62,7 +62,7 @@ struct WhichPraise: View {
                  .foregroundColor(.white)
                  .fontWeight(.medium)
                  .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 28))
+                 .font(.custom("Nunito-Regular", size: 24))
                  .padding(.all, 20.0)
                  .background(col1)
                  .background(RoundedRectangle(cornerRadius: 32)
@@ -76,7 +76,7 @@ struct WhichPraise: View {
                  .foregroundColor(.white)
                  .fontWeight(.medium)
                  .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 28))
+                 .font(.custom("Nunito-Regular", size: 24))
                  .padding(.all, 20.0)
                  .background(col1)
                  .background(RoundedRectangle(cornerRadius: 32)
@@ -89,7 +89,10 @@ struct WhichPraise: View {
               HStack{
               Spacer()
               Spacer()
-              Image("Logo2 1")
+                  Image("Logo2 1")
+                          .resizable()
+                          .scaledToFit()
+                          .frame(width: 100, height: 100)
               }
               
              

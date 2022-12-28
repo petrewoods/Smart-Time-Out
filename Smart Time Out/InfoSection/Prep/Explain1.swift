@@ -141,7 +141,10 @@ struct Explain1: View {
                     HStack{
                     Spacer()
                     Spacer()
-                    Image("Logo2 1")
+                        Image("Logo2 1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
                     }
                     
                     
@@ -151,18 +154,3 @@ struct Explain1: View {
                 }
     }
         
-
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Explain1()
-//                   .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
-//                   .previewDisplayName("iPhone 12")
-//
-//        Explain1()
-//                   .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
-//                   .previewDisplayName("iPhone SE (3rd Generation)")
-//    }
-//}
-//
-//

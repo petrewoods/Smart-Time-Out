@@ -48,7 +48,7 @@ struct ProblemView: View {
                      
                      Spacer()
                      
-                     NavigationLink(destination: BehaviourPromtView())
+                     NavigationLink(destination: BehaviourPromptView())
                      {
                      Text("Refusing \nInstruction")
                         .foregroundColor(.white)
@@ -65,7 +65,10 @@ struct ProblemView: View {
                      HStack{
                      Spacer()
                      Spacer()
-                     Image("Logo2 1")
+                         Image("Logo2 1")
+                                 .resizable()
+                                 .scaledToFit()
+                                 .frame(width: 100, height: 100)
                      }
                      
                     

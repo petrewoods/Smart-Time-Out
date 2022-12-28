@@ -1,13 +1,13 @@
 //
-//  File.swift
+//  OptionViewQuietTime.swift
 //  Smart Time Out
 //
-//  Created by Peter Woods on 23/11/2022.
+//  Created by Peter Woods on 27/12/2022.
 //
 
 import SwiftUI
 
-struct OptionView: View {
+struct OptionViewQuietTime: View {
     var body: some View {
            ZStack{
              VStack{
@@ -30,9 +30,9 @@ struct OptionView: View {
 //
                  
                  //button
-                 NavigationLink(destination: ProblemView())
+                 NavigationLink(destination: ProblemViewQuietTime())
                  {
-                 Text("Start \n Time Out")
+                 Text("Start \nQuiet Time")
                     .foregroundColor(.white)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
@@ -65,6 +65,9 @@ struct OptionView: View {
                  Spacer()
                  Spacer()
                  Image("Logo2 1")
+                         .resizable()
+                         .scaledToFit()
+                         .frame(width: 100, height: 100)
                  }
                     
                 

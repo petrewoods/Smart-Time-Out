@@ -29,9 +29,10 @@ struct InfoView: View {
                       .padding(.horizontal, 20.0)
                      Spacer()
                      Spacer()}
-                    
+                 Group{
                  Spacer()
                  Spacer()
+                 }
                  //can't have more than 10 static views so may
                  //have to group spacers
                  
@@ -97,13 +98,30 @@ struct InfoView: View {
                         .clipped())
                     .clipShape(RoundedRectangle(cornerRadius: 32))
                  }
+                 
+                 NavigationLink(destination: SettingsView())
+                 {
+                 Text("Settings")
+                    .foregroundColor(.white)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                    .font(.custom("Nunito-Regular", size: 32))
+                    .padding(.all, 20.0)
+                    .background(col1)
+                    .background(RoundedRectangle(cornerRadius: 32)
+                        .clipped())
+                    .clipShape(RoundedRectangle(cornerRadius: 32))
+                 }
                  //logo on bottom
                  Spacer()
                  
                  HStack{
                  Spacer()
                  Spacer()
-                 Image("Logo2 1")
+                     Image("Logo2 1")
+                             .resizable()
+                             .scaledToFit()
+                             .frame(width: 100, height: 100)
                  }
                     
                

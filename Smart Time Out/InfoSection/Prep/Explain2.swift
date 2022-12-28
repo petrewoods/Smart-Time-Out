@@ -10,7 +10,7 @@ import SwiftUI
 struct Explain2: View {
     
         var body: some View {
-            Explainchecklist2()
+            Explainchecklist2O()
         }
     }
 
@@ -137,7 +137,10 @@ struct Explain2: View {
                     HStack{
                     Spacer()
                     Spacer()
-                    Image("Logo2 1")
+                        Image("Logo2 1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
                     }
                     
                     

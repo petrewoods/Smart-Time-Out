@@ -28,8 +28,8 @@ struct Prep2: View {
                 VStack{
                     //title
                     HStack{
-                        Text("Use this checklist \nto score your \ntime out chair")
-                            .font(.custom("Roboto-Regular", size: 32))
+                        Text("This checklist is to prepare your time out chair")
+                            .font(.custom("Roboto-Regular", size: 28))
                             .foregroundColor(text1)
                             .multilineTextAlignment(.leading)
                             .padding(.horizontal, 20.0)
@@ -144,28 +144,15 @@ struct Prep2: View {
                             }
                             
                     }
-                    else{
-                        Spacer()
-                        
-                        //button is hidden but is actually there but unclickable to preserve formatting
-                            Text("Done")
-                               .foregroundColor(.white)
-                               .fontWeight(.medium)
-                               .multilineTextAlignment(.center)
-                               .font(.custom("Nunito-Regular", size: 32))
-                               .padding(.all, 30.0)
-                               .background(.white)
-                               .background(RoundedRectangle(cornerRadius: 32)
-                                   .clipped())
-                               .foregroundColor(.white)
-                               .clipShape(RoundedRectangle(cornerRadius: 32))
-                        
-                    }
+                    
                     
                     HStack{
                     Spacer()
                     Spacer()
-                    Image("Logo2 1")
+                        Image("Logo2 1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
                     }
                     
                     
@@ -176,5 +163,3 @@ struct Prep2: View {
                 
         }
     
-
-
