@@ -8,96 +8,162 @@
 import SwiftUI
 
 struct WhichPraise: View {
-  var body: some View {
+    
+    var body: some View {
+        
         ZStack{
-          VStack{
-              HStack{
-              
-                  Text("There are lots of aspects to good praise")
-                      .font(.custom("Roboto-Regular", size: 28))
-                      .foregroundColor(text1)
-                      .multilineTextAlignment(.leading)
-                      .padding(.horizontal, 20.0)
-              Spacer()
-              Spacer()
-              }
-             
-                  
-              
-//                     .font(.custom("Nunito-Regular", size: 32))
-//
-              
-              //button
-              NavigationLink(destination: Praisedelay())
-              {
-              Text("Don't Delay")
-                 .foregroundColor(.white)
-                 .fontWeight(.medium)
-                 .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 24))
-                 .padding(.all, 20.0)
-                 .background(col1)
-                 .background(RoundedRectangle(cornerRadius: 32)
-                     .clipped())
-                 .clipShape(RoundedRectangle(cornerRadius: 32))
-              }
-              
-              NavigationLink(destination: PraiseGenerous())
-              {
-              Text("Be Generous")
-                 .foregroundColor(.white)
-                 .fontWeight(.medium)
-                 .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 24))
-                 .padding(.all, 20.0)
-                 .background(col1)
-                 .background(RoundedRectangle(cornerRadius: 32)
-                     .clipped())
-                 .clipShape(RoundedRectangle(cornerRadius: 32))
-              }
-              
-              NavigationLink(destination: PraiseSmall())
-              {
-              Text("Start Small")
-                 .foregroundColor(.white)
-                 .fontWeight(.medium)
-                 .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 24))
-                 .padding(.all, 20.0)
-                 .background(col1)
-                 .background(RoundedRectangle(cornerRadius: 32)
-                     .clipped())
-                 .clipShape(RoundedRectangle(cornerRadius: 32))
-              }
-              
-              NavigationLink(destination: PraiseSpecific())
-              {
-              Text("Be Specific")
-                 .foregroundColor(.white)
-                 .fontWeight(.medium)
-                 .multilineTextAlignment(.center)
-                 .font(.custom("Nunito-Regular", size: 24))
-                 .padding(.all, 20.0)
-                 .background(col1)
-                 .background(RoundedRectangle(cornerRadius: 32)
-                     .clipped())
-                 .clipShape(RoundedRectangle(cornerRadius: 32))
-              }
-              Spacer()
-              
-              
-              HStack{
-              Spacer()
-              Spacer()
-                  Image("Logo2 1")
-                          .resizable()
-                          .scaledToFit()
-                          .frame(width: 100, height: 100)
-              }
-              
-             
-             }
-             
-         }
-     }
- }
+            
+            
+            VStack{
+                
+                
+                Image("PraiseCrop")
+                    .resizable()
+                    .scaledToFit()
+                    
+                
+                    .cornerRadius(8)
+                    .padding(.horizontal, 10.0)
+                    .padding(.vertical, 10.0)
+                Spacer()
+                
+                Text("There are lots of aspects to good praise")
+                    .font(.custom("Roboto-Regular", size: 18))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(40.0)
+                
+                //button1
+                NavigationLink(destination: Praisedelay()
+                    .navigationBarBackButtonHidden(false))
+                {
+                    Text("Don't Delay")
+                    
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Regular", size: 18))
+                        .frame(width: 250)
+                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                        .padding(.vertical, 20.0)
+                        .background(buttonGray)
+                        .background(RoundedRectangle(cornerRadius: 32)
+                            .clipped())
+                        .clipShape(RoundedRectangle(cornerRadius: 32))
+                }
+                
+                .padding(.vertical, 5.0)
+                
+                
+                //Button2
+                NavigationLink(destination: PraiseGenerous()
+                    .navigationBarBackButtonHidden(false)
+                )
+                {
+                    Text("Be Generous")
+                    
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Regular", size: 18))
+                        .frame(width: 250)
+                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                        .padding(.vertical, 20.0)
+                        .background(buttonGray)
+                        .background(RoundedRectangle(cornerRadius: 32)
+                            .clipped())
+                        .clipShape(RoundedRectangle(cornerRadius: 32))
+                }
+                
+                
+                .padding(.vertical, 5.0)
+                
+                
+                //Button3
+                NavigationLink(destination: PraiseSmall()
+                    .navigationBarBackButtonHidden(false)
+                )
+                {
+                    Text("Start Small")
+                    
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Regular", size: 18))
+                        .frame(width: 250)
+                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                        .padding(.vertical, 20.0)
+                        .background(buttonGray)
+                        .background(RoundedRectangle(cornerRadius: 32)
+                            .clipped())
+                        .clipShape(RoundedRectangle(cornerRadius: 32))
+                }
+                
+                
+                .padding(.vertical, 5.0)
+               
+                
+                
+                
+                //Button4
+                NavigationLink(destination: PraiseSpecific()
+                    .navigationBarBackButtonHidden(false)
+                )
+                {
+                    Text("Be Specific")
+                    
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Regular", size: 18))
+                        .frame(width: 250)
+                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                        .padding(.vertical, 20.0)
+                        .background(buttonGray)
+                        .background(RoundedRectangle(cornerRadius: 32)
+                            .clipped())
+                        .clipShape(RoundedRectangle(cornerRadius: 32))
+                }
+                
+                
+                .padding(.vertical, 5.0)
+                
+                Spacer()
+                
+                
+                //bottom progress
+                
+                
+                
+                
+                
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        .navigationBarTitleDisplayMode(.inline)
+        
+        .navigationTitle("Advice on praise")
+        .navigationBarTitleDisplayMode(.inline)
+        //FUNCTION TO ADD: This back button should be the previous page, this page can be acceessed via ContentView() and by any of the TimerViews
+        .navigationBarItems(
+            leading: NavigationLink(
+                destination: ContentView().navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                label: {
+                    Image("BackButton")
+                }
+            )
+        )
+        
+        
+    }
+    
+    
+}
+
+    

@@ -7,152 +7,206 @@
 
 import SwiftUI
 
+
+import SwiftUI
+
 struct Explain3: View {
     
-        var body: some View {
-            Explainchecklist3()
+    var body: some View {
+        ZStack{
+        Explain30()
         }
+        
+        .navigationTitle("Preparing the chair")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(
+            leading: NavigationLink(
+                destination: ContentView().navigationBarHidden(true),
+                label: {
+                    Image("BackButton")
+                }
+            )
+        )
     }
+}
 
 
-    struct Explainchecklist3: View {
-        @State private var isOne: Bool = false
-        @State private var isTwo: Bool = false
-        @State private var isThree: Bool = false
-        @State private var isFour: Bool = false
+struct Explain30: View {
+    @State private var isOne: Bool = false
+    @State private var isTwo: Bool = false
+    @State private var isThree: Bool = false
+    @State private var isFour: Bool = false
+    @State private var isFive: Bool = false
+    @State private var isSix: Bool = false
+    
+    var body: some View {
         
-        
-        var body: some View {
-            
-            ZStack{
+        ZStack{
+            VStack{
+                HStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(buttonGray)
+                        .frame(width: 50, height: 3)
+                        .padding(2)
+                        
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(buttonGray)
+                        .frame(width: 50, height: 3)
+                        .padding(2)
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(col1)
+                        .frame(width: 50, height: 3)
+                        .padding(2)
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(buttonGray)
+                        .frame(width: 50, height: 3)
+                        .padding(2)
+                }
                 VStack{
-                    //title
-                    
-                    
-                        Text("Ask your child the following questions")
-                            .font(.custom("Roboto-Regular", size: 32))
-                            .foregroundColor(text1)
-                            .multilineTextAlignment(.leading)
-                            .padding(.horizontal, 20.0)
-                  
-                    //toggles
-                    
-                    Group{
+                
+                
+               
+                    Text("Now explain")
+                        .font(.custom("Roboto-Regular", size: 20))
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.center)
                         
-                       
-                        Toggle("How do they like to calm down",isOn: $isOne)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 18))
-                            .foregroundColor(text1)
-                            .padding(.horizontal,20)
-                            .tint(col1)
                         
-                        //Text(isOne ? "ON": "Off")
-                    }
-                    NavigationLink(destination: Idea4())
+               
+                Spacer()
+                //toggles
+                
+                Group{
+                    
+                    
+                    Toggle("When they need to calm down you will ask them to go to time out",isOn: $isOne)
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .font(.custom("Roboto-Nunito", size: 16))
+                        .foregroundColor(.black)
+                        
+                        .padding(10)
+                        .tint(col1)
+                    
+                    
+                    
+                    //Text(isOne ? "ON": "Off")
+                
+                    
+                    
+                    Toggle("You will time them and let them know when they are done",isOn: $isTwo)
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .font(.custom("Roboto-Nunito", size: 16))
+                        .foregroundColor(.black)
+                        .padding(10)
+                    
+                        .tint(col1)
+                    
+                    
+                    //Text(isTwo ? "ON": "Off")
+                
+                    
+                    
+                    Toggle("Everyone will leave them alone",isOn: $isThree)
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .font(.custom("Roboto-Nunito", size: 16))
+                        .foregroundColor(.black)
+                        .padding(10)
+                        .tint(col1)
+                    
+                    
+                    //Text(isThree ? "ON": "Off")
+                
+                    
+                    
+                    Toggle("If they can't sit quietly they might need longer to calm down",isOn: $isFour)
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .font(.custom("Roboto-Nunito", size: 16))
+                        .foregroundColor(.black)
+                        .padding(10)
+                        .tint(col1)
+                    
+                
+                    
+                    
+                    
+                    
+                    //Text(isFive ? "ON": "Off")
+                }
+                Spacer()
+                
+                if(isOne == true &&
+                   isTwo == true &&
+                   isThree == true &&
+                   isFour == true
+                  ){
+                    NavigationLink(destination: Explain4().navigationBarBackButtonHidden(true))
                     {
-                    Image(systemName: "lightbulb")
-                        .font(.largeTitle)
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.leading)
-                    }
-                    
-                    Group{
                         
-                        Toggle("Can they explain time out back to you",isOn: $isTwo)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 18))
-                            .foregroundColor(text1)
-                            .padding(.horizontal,20)
-                            .tint(col1)
-                       
-                        
-                        //Text(isTwo ? "ON": "Off")
-                    }
-                    
-                    Group{
-                        
-                       
-                        Toggle("Do they have any worries or questions",isOn: $isThree)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 18))
-                            .foregroundColor(text1)
-                            .padding(.horizontal, 20)
-                            .tint(col1)
-                      
-                        
-                        //Text(isThree ? "ON": "Off")
-                    }
-                    
-                    Group{
-                        
-                        
-                        Toggle("Praise something good about the conversaion",isOn: $isFour)
-                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                            .font(.custom("Roboto-Nunito", size: 18))
-                            .foregroundColor(text1)
-                            .padding(.horizontal,20)
-                            .tint(col1)
-                        
-                       
-                       
-                    }
-                    NavigationLink(destination: Idea3())
-                    {
-                    Image(systemName: "lightbulb")
-                        .font(.largeTitle)
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.leading)
-                    }
-                    
-                        
-                    
-                    Spacer()
-                    
-                   
-                    if(isOne == true &&
-                       isTwo == true &&
-                       isThree == true &&
-                       isFour == true ){
-                        NavigationLink(destination: InfoView())
-                        {
+                        Text("Next")
+                            .foregroundColor(.black)
+                            .fontWeight(.medium)
+                            .multilineTextAlignment(.center)
+                            .font(.custom("Nunito-Regular", size: 22))
+                            .frame(width: 200, height: 30)
+                            .padding(.vertical, 10.0)
+                            .padding(.horizontal, 40.0)
                             
-                        Text("Well done for for finishing up")
-                           .foregroundColor(.white)
-                           .fontWeight(.medium)
-                           .multilineTextAlignment(.center)
-                           .font(.custom("Nunito-Regular", size: 22))
-                           .padding(.all, 30.0)
-                           .background(col1)
-                           .background(RoundedRectangle(cornerRadius: 32)
-                               .clipped())
-                           .clipShape(RoundedRectangle(cornerRadius: 32))
-                            }
-                            
-                    }
-                    else{
-                        Spacer()
+                            .background(buttonGray)
+                            .background(RoundedRectangle(cornerRadius: 32)
+                                .clipped())
+                            .clipShape(RoundedRectangle(cornerRadius: 32))
                         
-                        //button is hidden but is actually there but unclickable to preserve formatting
-                            
                         
                     }
-                    HStack{
-                    Spacer()
-                    Spacer()
-                        Image("Logo2 1")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                    }
+                    
+                }
+                
+                
+            
+            else{
+                Text("Next")
+                    .foregroundColor(.black)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                    .font(.custom("Nunito-Regular", size: 22))
+                    .frame(width: 200, height: 30)
+                    .padding(.vertical, 10.0)
+                    .padding(.horizontal, 40.0)
+                    .opacity(0.1)
+                    .background(buttonGray)
+                    .background(RoundedRectangle(cornerRadius: 32)
+                        .clipped())
+                    .clipShape(RoundedRectangle(cornerRadius: 32))
+                
+            }
                     
                     
                 }
-                    
-                    }
-                }
-    }
+                .frame(width: 300, height: 500)
+                
+            .padding()
+            .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.gray, lineWidth: 2)
+                )
+            
+            Spacer()
+         
+          
+            
+            }
+            
+        }
         
-
-
+        
+        
+        
+        
+       
+    }
+    
+   
+    
+}
 

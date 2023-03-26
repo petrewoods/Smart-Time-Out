@@ -36,7 +36,7 @@ struct InfoView: View {
                  //can't have more than 10 static views so may
                  //have to group spacers
                  
-                 
+                 Group{
                  //button
                  NavigationLink(destination: InfoPrep())
                  {
@@ -60,7 +60,7 @@ struct InfoView: View {
                     .foregroundColor(.white)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
-                    .font(.custom("Nunito-Regular", size: 32))
+                    .font(.custom("Nunito-Regular", size: 26))
                     .padding(.all, 20.0)
                     .background(col1)
                     .background(RoundedRectangle(cornerRadius: 32)
@@ -75,7 +75,7 @@ struct InfoView: View {
                     .foregroundColor(.white)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
-                    .font(.custom("Nunito-Regular", size: 32))
+                    .font(.custom("Nunito-Regular", size: 26))
                     .padding(.all, 20.0)
                     .background(col1)
                     .background(RoundedRectangle(cornerRadius: 32)
@@ -91,7 +91,7 @@ struct InfoView: View {
                     .foregroundColor(.white)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
-                    .font(.custom("Nunito-Regular", size: 32))
+                    .font(.custom("Nunito-Regular", size: 26))
                     .padding(.all, 20.0)
                     .background(col1)
                     .background(RoundedRectangle(cornerRadius: 32)
@@ -105,12 +105,27 @@ struct InfoView: View {
                     .foregroundColor(.white)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
-                    .font(.custom("Nunito-Regular", size: 32))
+                    .font(.custom("Nunito-Regular", size: 26))
                     .padding(.all, 20.0)
                     .background(col1)
                     .background(RoundedRectangle(cornerRadius: 32)
                         .clipped())
                     .clipShape(RoundedRectangle(cornerRadius: 32))
+                 }
+                 
+                 NavigationLink(destination: InfoMindful())
+                 {
+                 Text("Calm Breaths")
+                    .foregroundColor(.white)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                    .font(.custom("Nunito-Regular", size: 26))
+                    .padding(.all, 20.0)
+                    .background(col1)
+                    .background(RoundedRectangle(cornerRadius: 32)
+                        .clipped())
+                    .clipShape(RoundedRectangle(cornerRadius: 32))
+                 }
                  }
                  //logo on bottom
                  Spacer()

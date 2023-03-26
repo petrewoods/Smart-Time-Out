@@ -88,7 +88,7 @@ struct Explain3O: View {
                     Group{
                         
                         
-                        Toggle("Praise something good about the conversaion",isOn: $isFour)
+                        Toggle("Praise something good about the conversation",isOn: $isFour)
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                             .font(.custom("Roboto-Nunito", size: 18))
                             .foregroundColor(text1)

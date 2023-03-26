@@ -9,55 +9,154 @@ import SwiftUI
 
 struct QuietTimeInfo2: View {
     
+    @Environment(\.presentationMode) var presentationMode
+ 
+    
     var body: some View {
-        
-      
-        
-        ZStack{
-                 VStack{
-                    
-                     
-                     Text("Remember to ignore any talking or messing around during quiet time")
-                             .font(.custom("Roboto-Regular", size: 32))
-                             .foregroundColor(text1)
-                             .multilineTextAlignment(.leading)
-                             .padding(.horizontal, 20.0)
-                     
-                    
-                         
-                     Spacer()
-                     Spacer()
-                     Spacer()
-    //                     .font(.custom("Nunito-Regular", size: 32))
-    //
-                     
-                     
-                     NavigationLink(destination: TimerViewQuietTime())
-                     {
-                     Text("Continue")
-                        .foregroundColor(.white)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                        .font(.custom("Nunito-Regular", size: 32))
-                        .padding(.all, 30.0)
-                        .background(col1)
-                        .background(RoundedRectangle(cornerRadius: 32)
-                            .clipped())
-                        .clipShape(RoundedRectangle(cornerRadius: 32))
-                     }
-                     
-                     HStack{
-                     Spacer()
-                     Spacer()
-                         Image("Logo2 1")
-                                 .resizable()
-                                 .scaledToFit()
-                                 .frame(width: 100, height: 100)
-                     }
-                     
-                    
+        NavigationView{
+            ZStack{
+                Color(red: 0.141, green: 0.592, blue: 0.616)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                VStack{
+                    Group{
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
                     }
+                    
+                    Text("Tell your child")
+                        .font(.custom("Roboto-Regular", size: 22))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(20.0)
+                    Text("\"Because you did [bad thing] you have to sit in the quiet time chair.\nI will let you calm down.\"")
+                        .font(.custom("Roboto-Regular", size: 22))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                    Group{
+                        Spacer()
+                        Spacer()
+                    }
+                    
+                
+                   
+                    
+                    
+                    //button2
+                    NavigationLink(destination: TimerViewQuietTime()
+                        .navigationBarHidden(false)
+                        .navigationBarBackButtonHidden(true))
+                    {
+                        Text("Continue")
+                        
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Regular", size: 18))
+                            .frame(width: 250)
+                            .lineLimit(1)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20.0)
+                            .padding(.vertical, 20.0)
+                            .background(buttonGray)
+                            .background(RoundedRectangle(cornerRadius: 32)
+                                .clipped())
+                            .clipShape(RoundedRectangle(cornerRadius: 32))
+                    }
+                    
+                    .padding(.vertical, 20.0)
+                    
+                   
+                    
+                    
+                    
+                    
+                    HStack{
+                        Rectangle()
+                            .frame(width: 50, height: 3)
+                            .foregroundColor(Color(red: 1, green: 1, blue: 1, opacity: 0.0))
+                            .padding(2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(red: 1, green: 1, blue: 1, opacity: 0.3)))
+                        
+                        Rectangle()
+                            .frame(width: 50, height: 3)
+                            .foregroundColor(Color(red: 1, green: 1, blue: 1, opacity: 0.0))
+                            .padding(2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(red: 1, green: 1, blue: 1, opacity: 0.3)))
+                        
+                        Rectangle()
+                        
+                            .frame(width: 50, height: 3)
+                            .padding(2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(.white))
+                        
+                        
+                    }
+                    .padding(30)
+                    
+                    //bottom progress
+                    
+                    
+                    
+                    
                     
                 }
             }
+            
+            
+            
+            .ignoresSafeArea()
+            .edgesIgnoringSafeArea(.all)
+            .navigationTitle("Smart Time Out")
+            
+            
+            .navigationBarTitleDisplayMode(.inline)
+            
+        
+            
+            .navigationBarItems(
+                                trailing: NavigationLink(
+                                    destination: ContentView()
+                                        .navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                                    label: {
+                                        Image(systemName: "xmark")
+                                            .foregroundColor(.white)
+                                    }
+                                )
+                            )
+            .navigationBarItems(
+                                leading: NavigationLink(
+                                    destination: Timeout1()
+                                        .navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                                    label: {
+                                        Image(systemName: "info.circle")
+                                            .foregroundColor(.white)
+                                    }
+                                )
+                            )
+            
+            
+            
+            
         }
+        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
+        
+        
+        
+    }
+    
+    
+}
+
+
+
+

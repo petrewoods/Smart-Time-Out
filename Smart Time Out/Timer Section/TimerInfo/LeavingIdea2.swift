@@ -15,7 +15,7 @@ struct LeavingIdea2: View {
                   
                 
                 
-                    Text("Consider using consequences for running away. This could mean no tech tonight, no TV shows, or no storytime.")
+                    Text("Consider using consequences for running away. This could mean no tech tonight, no TV shows, or no story time.")
                         .font(.custom("Roboto-Nunito", size: 28))
                         .foregroundColor(text1)
                         .multilineTextAlignment(.center)

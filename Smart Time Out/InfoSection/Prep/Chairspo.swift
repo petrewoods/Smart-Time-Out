@@ -29,8 +29,20 @@ struct Chairspo: View
                
         }
         }
+        
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
+        .navigationTitle("When to use Time Out")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(
+            leading: NavigationLink(
+                destination: ContentView().navigationBarHidden(true),
+                label: {
+                    Image("BackButton")
+                }
+            )
+        )
+        
     }
 }
 
@@ -45,24 +57,20 @@ struct Chairspo1: View {
             {
                 
                 
-                Text("Here's a time out chair we like:")
-                    .font(.custom("Roboto-Regular", size: 28))
-                    .foregroundColor(text1)
-                    .multilineTextAlignment(.leading)
-                    .padding(.horizontal, 20.0)
+                
                 Image("Chairspo1")
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal,2)
-                
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                    .frame(width: 400, height: 400)
+                    .cornerRadius(20)
+             
+                Text("A heavy chair in the corner\nA cushion to squeeze to calm down \nNothing else within reach")
+                    .font(.custom("Roboto-Regular", size: 18))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(40.0)
+               
                 
             }
         }
@@ -80,24 +88,19 @@ struct Chairspo2: View {
             {
                 
                 
-                Text("Becca's chair is simple and out of the way")
-                    .font(.custom("Roboto-Regular", size: 28))
-                    .foregroundColor(text1)
-                    .multilineTextAlignment(.leading)
-                    .padding(.horizontal, 20.0)
+                
                 Image("Chairspo2")
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal,2)
+                    .frame(width: 400, height: 400)
+                    .cornerRadius(20)
+                Text("A chair around the corner means there is less social sensory stimulation")
+                    .font(.custom("Roboto-Regular", size: 18))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(40.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
                 
             }
         }
@@ -114,27 +117,39 @@ struct Chairspo3: View {
             {
                 
                 
-                Text("Dan has a big kitchen and put the chair here")
-                    .font(.custom("Roboto-Regular", size: 28))
-                    .foregroundColor(text1)
-                    .multilineTextAlignment(.leading)
-                    .padding(.horizontal, 20.0)
+                
                 Image("Chairspo3")
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal,2)
-                
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                    .frame(width: 400, height: 400)
+                    .cornerRadius(20)
+                Text("This chair is in the middle of the room so the child can’t rock against the walls")
+                    .font(.custom("Roboto-Regular", size: 18))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(40.0)
                 
             }
         }
     }
 }
+
+
+
+struct Chairspo_Preview: PreviewProvider {
+    static var previews: some View {
+        
+        
+        Chairspo()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+            .previewDisplayName("iPhone 13")
+        
+        Chairspo()
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
+            .previewDisplayName("iPhone SE (3rd Generation)")
+        
+    }
+}
+
 

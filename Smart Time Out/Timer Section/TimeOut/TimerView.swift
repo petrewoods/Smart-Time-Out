@@ -1,37 +1,44 @@
 
+
+
+
 import SwiftUI
-
-public var for1: Color = .blue
-public var for2: Color = .purple
-public var back1: Color = Color(UIColor(red: 0.47, green: 0.73, blue: 0.99, alpha: 1.0))
-
 
 struct TimerView: View
 {
-    //loads of variables needed
+    
     enum Constants
     {
-            static let timeYearsDefault = 5
-            static let timeYearsToTimeRemainingMultiplier = 60
+        static let timeYearsDefault = 5
+        static let timeYearsToTimeRemainingMultiplier = 60
     }
+    
     @State var choice: String
     @State private var isSpace: Bool = false
     @State private var isQuiet: Bool = false
+    @State private var isAnimating = false
+    @State private var isScaling = false
     
     @State public var downtime: Int = 1
-   
-    @State public var timeYears = Constants.timeYearsDefault
+    
+    @State public var timeYears = 5
+    
+    
     {
         didSet
         {
+            
+            
             self.timeRemaining = timeYears * Constants.timeYearsToTimeRemainingMultiplier
+            
+            
         }
     }
-    @State public var timeRemaining = Constants.timeYearsDefault * Constants.timeYearsToTimeRemainingMultiplier
-    @State public var totalTime = Constants.timeYearsDefault * Constants.timeYearsToTimeRemainingMultiplier
+    @State public var timeRemaining = 300
+    @State public var totalTime = Constants.timeYearsDefault
     var realTime: Int
     {
-        (timeYears + 0 ) * 60
+        (timeYears + 0 )
     }
     
     @State public var counter = 0
@@ -40,6 +47,8 @@ struct TimerView: View
     @State var tot: Double = 0
     
     @State private var testb = false
+    
+    
     
     //make the timer
     let timer = Timer.publish(every: 1, on: .main,in: .common).autoconnect()
@@ -53,295 +62,408 @@ struct TimerView: View
                       seconds)
     }
     
-       
-  
-
+    
+    
+    
+    
+    
+    
     //body
     var body: some View
     {
-        ZStack{
-            //this is the pop up if you put an inapropiate age for the child
-            if(timeYears < 3) {
-                VStack{
-                    Spacer()
-                    
-                    Text("Time out is \nonly sutiable \nfor ages 3-9")
-                        .font(.custom("Roboto-Regular", size: 38))
-                        .foregroundColor(text1)
-                        .multilineTextAlignment(.leading)
-                        .padding(.horizontal, 20.0)
-                       
-                    Spacer()
-                    Button("I understand") {
+        
+        
+        
+        NavigationView{
+            ZStack{
+                //this is the pop up if you put an inapropiate age for the child
+                if(timeYears < 3) {
+                    VStack{
+                        Spacer()
+                        
+                        Text("Time out is \nonly sutiable \nfor ages 3-9")
+                            .font(.custom("Nunito-Regular", size: 28))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.black)
+                            .minimumScaleFactor(0.5)
+                            .padding()
+                        
+                        Spacer()
+                        Button("I understand") {
                             timeYears = 5
                             isQuiet = false
                             isSpace = false
                         }
-                    .font(.custom("Roboto-Regular", size: 48))
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(col1
-                    .cornerRadius(10)
-                    .shadow(radius:10))
-                    Spacer()
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.center)
+                        .font(.custom("Nunito-Regular", size: 22))
+                        .padding(.horizontal, 70.0)
+                        .padding(.vertical, 20.0)
+                        .background(buttonGray)
+                        .background(RoundedRectangle(cornerRadius: 32)
+                            .clipped())
+                        .clipShape(RoundedRectangle(cornerRadius: 32))
+                        Spacer()
+                    }
                 }
-            }
-            
-            //below is main body of this page
-            
-            else{
-            
-            
-            VStack()
-            {
-                //can't figure out why this v stack starts so far down the page
-//                HStack{
-//
-//                Text("Time Out")
-//                    .font(.custom("Roboto-Regular", size: 48))
-//                    .foregroundColor(text1)
-//                    .multilineTextAlignment(.leading)
-//                    .padding(10)
-//                Spacer()
-//                Spacer()
-//                }
                 
-               
-                
-                if (timeRemaining > 1 )
-                {
-                
-                ZStack
-                {
-                    //timer
-                    Circle()
-                        .stroke (lineWidth: 20)
-                        .foregroundColor(.gray)
-                        .opacity(0.1)
-                    Circle()
-                    .trim(from: 0.0, to: min (tot, 1.0))
-                    .stroke (AngularGradient (gradient:Gradient(colors: [col1,col1]),center: .center), style:StrokeStyle(lineWidth:15.0,  lineJoin: .miter))
-                    .rotationEffect ((Angle (degrees: 271) ))
-                    .animation(.easeInOut (duration: 1.0), value: tot)
-                    //timer mechanics have to be attached to something
-                    .onChange(of: realTime) {newvalue in
-                                        timeRemaining = realTime}
-                    .onChange(of: realTime) {newvalue in totalTime = realTime}
-                    .onChange(of: timeRemaining) {newvalue in tot =  Double(timeRemaining)/Double(realTime)}
+                else{
                     VStack()
                     {
-                        if isQuiet && isSpace && (timeRemaining > 1 )
-//                        if isQuiet  && (timeRemaining > 1 )
+                        //main body
+                        if (timeRemaining > 1 )
                         {
-                            Text(converSecondstoTime(timeInSeconds:timeRemaining))
-                                .font(.custom("Nunito-Regular", size: 48))
-                                .foregroundColor(text1)
-                                .onReceive(timer, perform:{_ in timeRemaining -= downtime })
-                                
                             
-//                            {_ in timeRemaining -= downtime }
-//                            NavigationLink(destination: ChildLeaving())
-//                            {
-//                                Text("Child Leaving?")
-//                                    .font(.custom("Nunito-Regular", size: 20))
-//                                    .foregroundColor(for1)
-//                            }
-                        }
-                    }
-                    
-                }
-                .frame(width:250, height:250)
-                .padding()
-                .onAppear
-                {
-                tot = 1.0
-                }
-                
-                Spacer()
-                
-                    VStack
-                    {
-                        HStack
-                        {
-                        Text("Child's Age :")
-                        .font(.custom("Nunito-Regular", size: 38))
-                        .foregroundColor(col1)
-                        Picker(selection: $timeYears, label: Text("Age"))
-                        {
-                            Text("<3").tag(2)
-                            Text("3").tag(3)
-                            Text("4").tag(4)
-                            Text("5").tag(5)
-                            Text("6").tag(6)
-                            Text("7").tag(7)
-                            Text("8").tag(8)
-                            Text("9").tag(9)
-                            Text("10+").tag(2)
-                        }
-                        .pickerStyle(.wheel)
-                        .font(.custom("Nunito-Regular", size: 48))
-                        .foregroundColor(col1)
-                        .frame(width: 50,height: 50)
-                        .clipped()
-                        }
-                    }
-                Spacer()
-                    Toggle("Child being quiet",isOn: $isQuiet)
-                        .foregroundColor(.white)
-                        .font(.custom("Nunito-Regular", size: 24))
-                        .padding(20)
-                        .background(col1)
-                        .clipShape(Rectangle())
-                        .cornerRadius(10)
-                        .padding(.horizontal,10)
-                    //link needs updating
-                    NavigationLink(destination: QuietInfo())
-                        {Text("💡")
-                                .fontWeight(.medium)
-                                .multilineTextAlignment(.center)
-                                .font(.custom("Nunito-Regular", size: 28))
-                        }
-
-                    
-                Toggle("On the chair?",isOn: $isSpace)
-                    .foregroundColor(.white)
-                    .font(.custom("Nunito-Regular", size: 24))
-                    .padding(20)
-                    .background(col1)
-                    .clipShape(Rectangle())
-                    .cornerRadius(10)
-                    .padding(.horizontal,10)
-                    //running away
-                    NavigationLink(destination: RunningInfo())
-                        {Text("💡")
-                                .fontWeight(.medium)
-                                .multilineTextAlignment(.center)
-                                .font(.custom("Nunito-Regular", size: 28))
-                        }
-
-//                Toggle("Quiet?",isOn: $isQuiet)
-//                    .foregroundColor(.white)
-//                    .font(.custom("Nunito-Regular", size: 24))
-//                    .padding(20)
-//                    .background(col1)
-//                    .clipShape(Rectangle())
-//                    .cornerRadius(10)
-//                    .padding(.horizontal,10)
-                
-               
-                }
-                       //below is the pop ups when timer is done.
-                else
-                    {
-                    //notification schedule when time goes to 0
-                   
-                   
-                    if(choice == "V" )
-                    {
-                        ZStack{
-                            VStack{
-                                
-                        
-                            Text("The timer has finished so tell your child to leave time out and praise them as soon as possible")
-                            .foregroundColor(text1)
+                            Spacer()
                             
-                            .multilineTextAlignment(.leading)
-                            .font(.custom("Nunito-Regular", size: 28))
-                            .padding(10)
-                            .onAppear {
-                                NotificationManager.instance.scheduleNotification()
-                            }
-                        
-                            NavigationLink(destination: ContentView())
-                                {Text(" Ok ")
-                                        .foregroundColor(.white)
-                                        
-                                        .multilineTextAlignment(.center)
-                                        .font(.custom("Nunito-Regular", size: 22))
-                                        .padding(.all, 30.0)
-                                        .background(col1)
-                                        .background(RoundedRectangle(cornerRadius: 32)
-                                            .clipped())
-                                        .clipShape(RoundedRectangle(cornerRadius: 32))
+                            
+                            //animation z stack
+                            if isQuiet && isSpace && (timeRemaining > 1 ){
+                                
+                                Spacer()
+                                
+                                ZStack
+                                {
+                                    //timer
+                                    Spacer()
+                                    GifImage("Breathe")
+                                    
+                                    Circle()
+                                        .stroke (lineWidth: 20)
+                                        .foregroundColor(.gray)
+                                        .opacity(0.1)
+                                    
+                                    Circle()
+                                        .trim(from: 0.0, to: min (tot, 1.0))
+                                    
+                                        .stroke (AngularGradient (gradient:Gradient(colors: [col1,col1]),center: .center), style:StrokeStyle(lineWidth:15.0,  lineJoin: .miter))
+                                        .rotationEffect ((Angle (degrees: 271) ))
+                                        .animation(.easeInOut (duration: 1.0), value: tot)
+                                    
+                                        .onChange(of: realTime) {newvalue in
+                                            timeRemaining = realTime}
+                                        .onChange(of: realTime) {newvalue in totalTime = realTime}
+                                        .onChange(of: timeRemaining) {newvalue in tot =  Double(timeRemaining)/Double(realTime)}
                                 }
-                                NavigationLink(destination: InfoView())
-                                    {Text("Give me advice")
-                                            .foregroundColor(.white)
-                                            
-                                            .multilineTextAlignment(.center)
-                                            .font(.custom("Nunito-Regular", size: 22))
-                                            .padding(.all, 30.0)
-                                            .background(col1)
-                                            .background(RoundedRectangle(cornerRadius: 32)
-                                                .clipped())
-                                            .clipShape(RoundedRectangle(cornerRadius: 32))
-                                    }
-                        
-                    }
-                        }
-                    }
-                            
-                    
-                    
-                    else
-                        {
-                        ZStack{
-                            VStack{
-                        
+                                .frame(width:250, height:250)
+                                .padding()
+                                .onAppear
+                                {
+                                    
+                                    tot = 1.0
+                                }
                                 
-                            Text("The timer has finished so tell your child to do what they were refusing to do")
-                            .foregroundColor(text1)
-                                    .multilineTextAlignment(.leading)
-                                    .font(.custom("Nunito-Regular", size: 18))
-                                    .padding(10)
-                                    .onAppear {
-                                        NotificationManager.instance.scheduleNotification()
+                            }
+                            else{
+                                
+                                VStack{
+                                    ZStack{
+                                        Image("Breathestatic")
+                                        
+                                    }
+                                    .frame(width:100, height:100)
+                                    .padding()
+                                }
+                                
+                                
+                                
+                                HStack {
+                                    Text("Child's Age :")
+                                        .font(.custom("Nunito-Regular", size: 28))
+                                        .foregroundColor(.black)
+                                    Picker(selection: $timeYears, label: Text("Age"))
+                                    {
+                                        Text("<3").tag(2)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("3").tag(3)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("4").tag(4)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("5").tag(5)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("6").tag(6)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("7").tag(7)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("8").tag(8)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("9").tag(9)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                        Text("10+").tag(2)
+                                            .font(.custom("Nunito-Regular", size: 28))
+                                    }
+                                    .pickerStyle(.wheel)
+                                    .frame(width: 100,height: 100)
+                                    .clipped()
+                                    .onChange(of: timeYears) { newValue in
+                                        timeRemaining = timeYears * Constants.timeYearsToTimeRemainingMultiplier
+                                    }
+                                }
+                                
+                                Text(converSecondstoTime(timeInSeconds:timeRemaining))
+                                    .font(.custom("Nunito-Regular", size: 28))
+                                    .foregroundColor(.gray)
+                                
+                            }
+                            
+                            if isQuiet && isSpace && (timeRemaining > 1 )
+                                
+                            {   Spacer()
+                                Spacer()
+                                Text(converSecondstoTime(timeInSeconds:timeRemaining))
+                                    .font(.custom("Nunito-Regular", size: 48))
+                                    .foregroundColor(.black)
+                                    .onReceive(timer, perform:{_ in timeRemaining -= downtime })
+                                
+                                    .scaleEffect(1.5)
+                                
+                                
+                            }
+                            Spacer()
+                           
+                            // button stack
+                            HStack{
+                                
+                                Button(action: {
+                                    withAnimation(.easeIn){
+                                        isQuiet.toggle()
+                                    }
+                                }) {
+                                    ZStack{
+                                        Circle()
+                                            .fill(isQuiet ?col1:buttonDarkGray)
+                                        
+                                            .scaleEffect(isQuiet ? 0.8 : 1.0)
+                                        
+                                        Image(systemName: "ear")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .foregroundColor(.white)
+                                            .frame(width: 50, height: 50)
+                                    }
+                                    .frame(width: 100, height: 100)
+                                }.padding([.top, .leading, .bottom], 20)
+                                
+                                Text("+")
+                                    .font(.custom("Nunito-Regular", size: 48))
+                                    .foregroundColor(buttonDarkGray)
+                                
+                                Button(action: {
+                                    withAnimation(.easeIn){
+                                        isSpace.toggle()
+                                    }
+                                }) {
+                                    ZStack{
+                                        Circle()
+                                            .fill(isSpace ?col1:buttonDarkGray)
+                                        
+                                            .scaleEffect(isSpace ? 0.8 : 1.0)
+                                        
+                                        Image(systemName: "chair")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .foregroundColor(.white)
+                                            .frame(width: 50, height: 50)
+                                    }
+                                    .frame(width: 100, height: 100)
+                                }.padding([.top, .bottom, .trailing], 20.0)
+                                
+                            }
+                            
+                            .background(backLightGray)
+                            .cornerRadius(90)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 90)
+                                    .stroke(Color(red: 0.996, green: 0.717, blue: 0), lineWidth: 1))
+                            
+                            
+                            HStack{
+                                Spacer()
+                                Spacer()
+                                Text("Quieter?")
+                                    .font(.caption)
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                Text("Sitting?")
+                                    .font(.caption)
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Spacer()
+                            }
+                            .padding([.leading, .bottom, .trailing], 20.0)
+                        }
+                        /////////////////////// Timer FINISHED SECTION//////////////////
+                        //below is the pop ups when timer is done.
+                        
+                        else{
+                            
+                            ZStack{
+                                Color(red: 0.141, green: 0.592, blue: 0.616)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                
+                                VStack{
+                                    Group{
+                                        Spacer()
+                                        Spacer()
+                                        Spacer()
+                                        Spacer()
+                                        Spacer()
                                     }
                                     
-                        
-                            
-                            NavigationLink(destination: BehaviourPraise())
-                                {Text("They've done it ")
+                                    Text("The timer has finished so tell your child to leave time out and praise them as soon as possible")
+                                        .font(.custom("Roboto-Regular", size: 22))
                                         .foregroundColor(.white)
                                         .multilineTextAlignment(.center)
-                                        .font(.custom("Nunito-Regular", size: 22))
-                                        .padding(.all, 30.0)
-                                        .background(col1)
-                                        .background(RoundedRectangle(cornerRadius: 32)
-                                            .clipped())
-                                        .clipShape(RoundedRectangle(cornerRadius: 32))
-                                }
-                                //this will need updating
-                                NavigationLink(destination: BehaviourPromptView())
-                                    {Text("They still refuse ")
-                                            .foregroundColor(.white)
+                                        .padding(.horizontal, 20.0)
+                                    Spacer()
+                                    
+                                    
+                                    Group{
+                                        Spacer()
+                                        Spacer()
+                                    }
+                                    
+                                    
+                                    //button1
+                                    NavigationLink(destination: ContentView()
+                                        .navigationBarHidden(true))
+                                    {
+                                        Text("Ok")
+                                        
+                                            .foregroundColor(.black)
+                                            .font(.custom("Nunito-Regular", size: 18))
+                                            .frame(width: 250)
+                                            .lineLimit(1)
                                             .multilineTextAlignment(.center)
-                                            .font(.custom("Nunito-Regular", size: 22))
-                                            .padding(.all, 30.0)
-                                            .background(col1)
+                                            .padding(.horizontal, 20.0)
+                                            .padding(.vertical, 20.0)
+                                            .background(buttonGray)
                                             .background(RoundedRectangle(cornerRadius: 32)
                                                 .clipped())
                                             .clipShape(RoundedRectangle(cornerRadius: 32))
                                     }
+                                    
+                                    .padding(.vertical, 20.0)
+                                    
+                                    NavigationLink(destination: InfoPraise()
+                                        .navigationBarHidden(true))
+                                    {
+                                        Text("Give me advice")
+                                        
+                                            .foregroundColor(.black)
+                                            .font(.custom("Nunito-Regular", size: 18))
+                                            .frame(width: 250)
+                                            .lineLimit(1)
+                                            .multilineTextAlignment(.center)
+                                            .padding(.horizontal, 20.0)
+                                            .padding(.vertical, 20.0)
+                                            .background(buttonGray)
+                                            .background(RoundedRectangle(cornerRadius: 32)
+                                                .clipped())
+                                            .clipShape(RoundedRectangle(cornerRadius: 32))
+                                    }
+                                    .padding(.vertical, 20.0)
+                                }
+                                
+                                //                                                                    if choice == "V" {
+                                //                                                                        //Button2
+                                //                                                                        NavigationLink(destination: CalmEscalate2()
+                                //                                                                            .navigationBarHidden(true))
+                                //                                                                        {
+                                //                                                                            Text("Finished violence ")
+                                //
+                                //                                                                                .foregroundColor(.black)
+                                //                                                                                .font(.custom("Nunito-Regular", size: 18))
+                                //                                                                                .frame(width: 250)
+                                //                                                                                .lineLimit(1)
+                                //                                                                                .multilineTextAlignment(.center)
+                                //                                                                                .padding(.horizontal, 20.0)
+                                //                                                                                .padding(.vertical, 20.0)
+                                //                                                                                .background(buttonGray)
+                                //                                                                                .background(RoundedRectangle(cornerRadius: 32)
+                                //                                                                                    .clipped())
+                                //                                                                                .clipShape(RoundedRectangle(cornerRadius: 32))
+                                //                                                                        }
+                                //                                                                        .padding(.vertical, 20.0)
+                                //                                                                    }
+                                //
+                                //                                                                    if choice == "O"{
+                                //                                                                        //Button2
+                                //                                                                        NavigationLink(destination: CalmEscalate3()
+                                //                                                                            .navigationBarHidden(true))
+                                //                                                                        {
+                                //                                                                            Text("Finished opposition")
+                                //
+                                //                                                                                .foregroundColor(.black)
+                                //                                                                                .font(.custom("Nunito-Regular", size: 18))
+                                //                                                                                .frame(width: 250)
+                                //                                                                                .lineLimit(1)
+                                //                                                                                .multilineTextAlignment(.center)
+                                //                                                                                .padding(.horizontal, 20.0)
+                                //                                                                                .padding(.vertical, 20.0)
+                                //                                                                                .background(buttonGray)
+                                //                                                                                .background(RoundedRectangle(cornerRadius: 32)
+                                //                                                                                    .clipped())
+                                //                                                                                .clipShape(RoundedRectangle(cornerRadius: 32))
+                                //                                                                        }
+                                //                                                                        .padding(.vertical, 20.0)
+                                //                                                                    }
+                                
                             }
+                            
+                            
+                           
+                            
+                            //bottom progress
+                            
                         }
                         
-                        }
-                    
                     }
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
+                    .ignoresSafeArea(.all)
                 }
+                
             }
-            }
-        Spacer()
             
         }
+        
+        .navigationTitle("Smart Time Out")
+        .foregroundColor(.black)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(
+            leading: NavigationLink(
+                destination: Timeout1()
+                    .navigationBarHidden(false)
+                    .navigationBarBackButtonHidden(true),
+                label: {
+                    Image(systemName: "info.circle")
+                        .foregroundColor(.black)
+                }
+            ),
+            trailing: NavigationLink(
+                destination: ContentView()
+                    .navigationBarHidden(false)
+                    .navigationBarBackButtonHidden(true),
+                label: {
+                    Image(systemName: "xmark")
+                        .foregroundColor(.black)
+                }
+            )
+        )
+        
+        
     }
 }
 
+
+
+
+
+struct MyPreviewProvider_Previews: PreviewProvider {
+    static var previews: some View {
+        TimerView(choice: "V")
+            .previewDevice("iPhone SE (3rd generation)")
+            
+    }
+}

@@ -8,68 +8,111 @@
 import SwiftUI
 
 struct InfoPrep: View {
+    
     var body: some View {
-               ZStack{
-                 VStack{
-                     HStack{
-                     
-                         Text("What do you \nwant to \nprepare")
-                             .font(.custom("Roboto-Regular", size: 38))
-                             .foregroundColor(text1)
-                             .multilineTextAlignment(.leading)
-                             .padding(.horizontal, 20.0)
-                     Spacer()
-                     Spacer()
-                     }
-                    Spacer()
-                         
-                     
-    //                     .font(.custom("Nunito-Regular", size: 32))
-    //
-                     
-                     //button
-                     NavigationLink(destination: Prep1())
-                     {
-                     Text("Prepare \nthe chair")
-                        .foregroundColor(.white)
-                        .fontWeight(.medium)
+        
+        ZStack{
+            
+            
+            VStack{
+                
+                
+                Image("ChairPrepare")
+                    .resizable()
+                    .scaledToFit()
+                
+                    .cornerRadius(8)
+                    .padding(.horizontal, 10.0)
+                    .padding(.vertical, 40.0)
+                Spacer()
+                
+                
+                //button1
+                NavigationLink(destination: Prep2()
+                    .navigationBarBackButtonHidden(true))
+                {
+                    Text("Chair Checklist")
+                    
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Regular", size: 18))
+                        .frame(width: 250)
+                        .lineLimit(1)
                         .multilineTextAlignment(.center)
-                        .font(.custom("Nunito-Regular", size: 28))
-                        .padding(.all, 20.0)
-                        .background(col1)
+                        .padding(.horizontal, 20.0)
+                        .padding(.vertical, 20.0)
+                        .background(buttonGray)
                         .background(RoundedRectangle(cornerRadius: 32)
                             .clipped())
                         .clipShape(RoundedRectangle(cornerRadius: 32))
-                     }
-                     
-                     Spacer()
-                     
-                     NavigationLink(destination: Prep3())
-                     {
-                     Text("Explain \ntime out")
-                        .foregroundColor(.white)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                        .font(.custom("Nunito-Regular", size: 28))
-                        .padding(.all, 30.0)
-                        .background(col1)
-                        .background(RoundedRectangle(cornerRadius: 32)
-                            .clipped())
-                        .clipShape(RoundedRectangle(cornerRadius: 32))
-                     }
-                     
-                     HStack{
-                     Spacer()
-                     Spacer()
-                         Image("Logo2 1")
-                                 .resizable()
-                                 .scaledToFit()
-                                 .frame(width: 100, height: 100)
-                     }
-                     
-                    
-                    }
-                    
                 }
+                
+                .padding(.vertical, 20.0)
+                
+                
+                //Button2
+                NavigationLink(destination: Chairspo()
+                    .navigationBarBackButtonHidden(true)
+                )
+                {
+                    Text("Example Chairs")
+                    
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Regular", size: 18))
+                        .frame(width: 250)
+                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                        .padding(.vertical, 20.0)
+                        .background(buttonGray)
+                        .background(RoundedRectangle(cornerRadius: 32)
+                            .clipped())
+                        .clipShape(RoundedRectangle(cornerRadius: 32))
+                }
+                
+                
+                .padding(.vertical, 20.0)
+                Spacer()
+                
+                
+                
+                
+                
+                //bottom progress
+                
+                
+                
+                
+                
             }
         }
+        
+        
+        
+        
+        
+        
+        
+        .navigationBarTitleDisplayMode(.inline)
+        
+        .navigationTitle("Preparing the Chair")
+        .navigationBarTitleDisplayMode(.inline)
+        //FUNCTION TO ADD: This back button should be the previous page, this page can be acceessed via ContentView() and by any of the TimerViews
+        .navigationBarItems(
+            leading: NavigationLink(
+                destination: ContentView().navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                label: {
+                    Image("BackButton")
+                }
+            )
+        )
+        
+        
+    }
+    
+    
+}
+
+    
+
+
+

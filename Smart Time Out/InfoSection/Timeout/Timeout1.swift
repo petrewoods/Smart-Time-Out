@@ -35,8 +35,22 @@ struct Timeout1: View
         }
         }
         .tabViewStyle(.page)
+        
         .indexViewStyle(.page(backgroundDisplayMode: .always))
+        .navigationTitle("When to use Time Out")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(
+            leading: NavigationLink(
+                destination: ContentView().navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                label: {
+                    Image("BackButton")
+                }
+            )
+        )
+        
+        
     }
+    
 }
 
 
@@ -54,14 +68,7 @@ struct Time1: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }
@@ -82,14 +89,7 @@ struct Time2: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }
@@ -110,14 +110,7 @@ struct Time3: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }
@@ -137,14 +130,7 @@ struct Time4: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
@@ -164,14 +150,7 @@ struct Time5: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
@@ -191,14 +170,7 @@ struct Time6: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }
@@ -219,14 +191,7 @@ struct Time7: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
@@ -247,14 +212,7 @@ struct Time8: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
@@ -275,16 +233,26 @@ struct Time9: View {
                     .scaledToFit()
                     .padding(.horizontal,2)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
+    }
+}
+
+
+
+struct  Timeout1_Previews: PreviewProvider {
+    static var previews: some View {
+        Timeout1()
+                   .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+                   .previewDisplayName("iPhone 13")
+
+        Timeout1()
+                   .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
+                   .previewDisplayName("iPhone SE (3rd Generation)")
+        Timeout1()
+                   .previewDevice(PreviewDevice(rawValue: "iPod touch (7th generation)"))
+                   .previewDisplayName("iPod touch (7th generation)")
     }
 }

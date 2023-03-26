@@ -7,74 +7,181 @@
 
 
 
+
 import SwiftUI
 
 struct ProblemView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+ 
+    
     var body: some View {
-               ZStack{
-                 VStack{
-                     HStack{
-                     
-                         Text("Select a \nProblem")
-                             .font(.custom("Roboto-Regular", size: 42))
-                             .foregroundColor(text1)
-                             .multilineTextAlignment(.leading)
-                             .padding(.horizontal, 20.0)
-                     Spacer()
-                     Spacer()
-                     }
-                    
-                         
-                     Spacer()
-                     Spacer()
-                     Spacer()
-    //                     .font(.custom("Nunito-Regular", size: 32))
-    //
-                     
-                     //button
-                     NavigationLink(destination: TimerView(choice: "V"))
-                     {
-                     Text("Violence")
-                        .foregroundColor(.white)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                        .font(.custom("Nunito-Regular", size: 32))
-                        .padding(.all, 30.0)
-                        .background(col1)
-                        .background(RoundedRectangle(cornerRadius: 32)
-                            .clipped())
-                        .clipShape(RoundedRectangle(cornerRadius: 32))
-                     }
-                     
-                     Spacer()
-                     
-                     NavigationLink(destination: BehaviourPromptView())
-                     {
-                     Text("Refusing \nInstruction")
-                        .foregroundColor(.white)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                        .font(.custom("Nunito-Regular", size: 32))
-                        .padding(.all, 30.0)
-                        .background(col1)
-                        .background(RoundedRectangle(cornerRadius: 32)
-                            .clipped())
-                        .clipShape(RoundedRectangle(cornerRadius: 32))
-                     }
-                     
-                     HStack{
-                     Spacer()
-                     Spacer()
-                         Image("Logo2 1")
-                                 .resizable()
-                                 .scaledToFit()
-                                 .frame(width: 100, height: 100)
-                     }
-                     
-                    
+        NavigationView{
+            ZStack{
+                Color(red: 0.141, green: 0.592, blue: 0.616)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                VStack{
+                    Group{
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
                     }
+                    
+                    Text("Select a Problem")
+                        .font(.custom("Roboto-Regular", size: 22))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                    Group{
+                        Spacer()
+                        Spacer()
+                    }
+                    
+                    
+                    //button1
+                    NavigationLink(destination: TimerView(choice: "V")
+                        .navigationBarHidden(false)
+                        .navigationBarBackButtonHidden(true))
+                    {
+                        Text("Violence")
+                        
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Regular", size: 18))
+                            .frame(width: 250)
+                            .lineLimit(1)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20.0)
+                            .padding(.vertical, 20.0)
+                            .background(buttonGray)
+                            .background(RoundedRectangle(cornerRadius: 32)
+                                .clipped())
+                            .clipShape(RoundedRectangle(cornerRadius: 32))
+                    }
+                    
+                    .padding(.vertical, 20.0)
+                    
+                    //button2
+                    NavigationLink(destination: BehaviourPromptView()
+                        .navigationBarHidden(true))
+                    {
+                        Text("Refusing Instruction")
+                        
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Regular", size: 18))
+                            .frame(width: 250)
+                            .lineLimit(1)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20.0)
+                            .padding(.vertical, 20.0)
+                            .background(buttonGray)
+                            .background(RoundedRectangle(cornerRadius: 32)
+                                .clipped())
+                            .clipShape(RoundedRectangle(cornerRadius: 32))
+                    }
+                    
+                    .padding(.vertical, 20.0)
+                    
+                    
+                    //Button2
+                    NavigationLink(destination: SomethingElse()
+                        .navigationBarHidden(true))
+                    {
+                        Text("Something Else")
+                        
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Regular", size: 18))
+                            .frame(width: 250)
+                            .lineLimit(1)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20.0)
+                            .padding(.vertical, 20.0)
+                            .background(buttonGray)
+                            .background(RoundedRectangle(cornerRadius: 32)
+                                .clipped())
+                            .clipShape(RoundedRectangle(cornerRadius: 32))
+                    }
+                    
+                    
+                    .padding(.vertical, 20.0)
+                    
+                    
+                    
+                    
+                    HStack{
+                        Rectangle()
+                        
+                            .frame(width: 50, height: 3)
+                            .padding(2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(.white))
+                        
+                        Rectangle()
+                            .frame(width: 50, height: 3)
+                            .foregroundColor(Color(red: 1, green: 1, blue: 1, opacity: 0.0))
+                            .padding(2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(red: 1, green: 1, blue: 1, opacity: 0.3)))
+                        
+                    }
+                    .padding(30)
+                    
+                    //bottom progress
+                    
+                    
+                    
+                    
                     
                 }
             }
+            
+            
+            
+            .ignoresSafeArea()
+            .edgesIgnoringSafeArea(.all)
+            .navigationTitle("Smart Time Out")
+            
+            
+            .navigationBarTitleDisplayMode(.inline)
+            
+        
+            
+            .navigationBarItems(
+                                trailing: NavigationLink(
+                                    destination: ContentView()
+                                        .navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                                    label: {
+                                        Image(systemName: "xmark")
+                                            .foregroundColor(.white)
+                                    }
+                                )
+                            )
+            .navigationBarItems(
+                                leading: NavigationLink(
+                                    destination: Timeout1()
+                                        .navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                                    label: {
+                                        Image(systemName: "info.circle")
+                                            .foregroundColor(.white)
+                                    }
+                                )
+                            )
+            
+            
+            
+            
         }
+        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
+        
+        
+        
+    }
+    
+    
+}
 

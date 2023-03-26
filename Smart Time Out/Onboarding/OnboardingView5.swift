@@ -33,7 +33,7 @@ struct OnboardingView5: View {
                      
                      NavigationLink(destination: InfoPrepO())
                      {
-                     Text("Check your chair")
+                     Text("Check Your Chair")
                              .fontWeight(.medium)
                              .multilineTextAlignment(.center)
                              .font(.custom("Nunito-Regular", size: 28))
@@ -49,7 +49,7 @@ struct OnboardingView5: View {
                      }
                      NavigationLink(destination: InfoExplain1())
                      {
-                     Text("Explain time out")
+                     Text("Explain Time Out")
                              .fontWeight(.medium)
                              .multilineTextAlignment(.center)
                              .font(.custom("Nunito-Regular", size: 28))
@@ -65,7 +65,7 @@ struct OnboardingView5: View {
                      }
                      NavigationLink(destination: OnboardingView6())
                      {
-                     Text("I'll do this later")
+                     Text("Finish Now")
                         .foregroundColor(.white)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
@@ -77,14 +77,14 @@ struct OnboardingView5: View {
                         .clipShape(RoundedRectangle(cornerRadius: 32))
                      }
                      
-                     HStack{
-                     Spacer()
-                     Spacer()
-                         Image("Logo2 1")
-                                 .resizable()
-                                 .scaledToFit()
-                                 .frame(width: 100, height: 100)
-                     }
+//                     HStack{
+//                     Spacer()
+//                     Spacer()
+//                         Image("Logo2 1")
+//                                 .resizable()
+//                                 .scaledToFit()
+//                                 .frame(width: 100, height: 100)
+//                     }
                      
                     
                     }

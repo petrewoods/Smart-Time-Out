@@ -53,15 +53,7 @@ struct PraiseGenerous1: View {
                     .foregroundColor(text1)
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
-                
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }
@@ -88,14 +80,7 @@ struct PraiseGenerous2: View {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }
@@ -120,15 +105,7 @@ struct PraiseGenerous3: View {
                     .foregroundColor(text1)
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
-                
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }

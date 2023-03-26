@@ -49,20 +49,12 @@ struct PraiseWhy1: View {
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal,2)
-                Text("Your children love your atention. Praising them makes them 'feel your love'.")
+                Text("Your children love your attention. Praising them makes them 'feel your love'.")
                     .font(.custom("Roboto-Regular", size: 28))
                     .foregroundColor(text1)
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
                 
             }
         }
@@ -90,14 +82,7 @@ struct PraiseWhy2: View {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
@@ -124,14 +109,7 @@ struct PraiseWhy3: View {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+               
                 
             }
         }

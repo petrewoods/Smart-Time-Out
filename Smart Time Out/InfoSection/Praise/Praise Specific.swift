@@ -54,14 +54,7 @@ struct PraiseSpecific1: View {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
@@ -88,14 +81,7 @@ struct PraiseSpecific2: View {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
@@ -121,17 +107,9 @@ struct PraiseSpecific3: View {
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 20.0)
                 
-                HStack{
-                Spacer()
-                Spacer()
-                    Image("Logo2 1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                }
+                
                 
             }
         }
     }
 }
-

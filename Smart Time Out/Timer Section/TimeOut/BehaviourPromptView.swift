@@ -6,67 +6,149 @@
 //
 import SwiftUI
 
+
+
 struct BehaviourPromptView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+ 
+    
     var body: some View {
-    ZStack{
-      VStack{
-          
-          Text("Tell your child")
-              .font(.custom("Roboto-Regular", size: 48))
-              .foregroundColor(text1)
-              .multilineTextAlignment(.leading)
-              .padding(.horizontal, 10.0)
-          Spacer()
-          Spacer()
-          HStack{
-              Spacer()
-              Text("\"If you don't follow \nthe instructions then \nyou will have \nto go into \ntime out\"")
-                  .font(.custom("Roboto-Regular", size: 28))
-                  .foregroundColor(text1)
-                  .multilineTextAlignment(.leading)
-              
-              Spacer()
-              Spacer()
-              Spacer()
-                }
+        NavigationView{
+            ZStack{
+                Color(red: 0.141, green: 0.592, blue: 0.616)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
-          Spacer()
-          Spacer()
-          Spacer()
-//                     .font(.custom("Nunito-Regular", size: 32))
-//
-          
-          //button
-          NavigationLink(destination: TimerView(choice: "O"))
-          {
-          Text("Behaviour is \n not improving")
-             .foregroundColor(.white)
-             .fontWeight(.medium)
-             .multilineTextAlignment(.center)
-             .font(.custom("Nunito-Regular", size: 38))
-             .padding(.all, 30.0)
-             .background(col1)
-             .background(RoundedRectangle(cornerRadius: 32)
-                 .clipped())
-             .clipShape(RoundedRectangle(cornerRadius: 32))
-          }
-     
-          
-          //logo on bottom
-          
-          HStack{
-          Spacer()
-          Spacer()
-              Image("Logo2 1")
-                      .resizable()
-                      .scaledToFit()
-                      .frame(width: 100, height: 100)
-          }
-             
-          
-         }
-         
-     }
- }
+                VStack{
+                    Group{
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
+                    
+                    Text("Tell your child")
+                        .font(.custom("Roboto-Regular", size: 22))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(20.0)
+                    Text("\"If you don't follow \nthe instructions then \nyou will have \nto go into \ntime out\"")
+                        .font(.custom("Roboto-Regular", size: 22))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20.0)
+                    Group{
+                        Spacer()
+                        Spacer()
+                    }
+                    
+                
+                   
+                    
+                    
+                    //button2
+                    NavigationLink(destination: TimerViewQuietTime()
+                        .navigationBarHidden(false)
+                        .navigationBarBackButtonHidden(true))
+                    {
+                        Text("Continue")
+                        
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Regular", size: 18))
+                            .frame(width: 250)
+                            .lineLimit(1)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20.0)
+                            .padding(.vertical, 20.0)
+                            .background(buttonGray)
+                            .background(RoundedRectangle(cornerRadius: 32)
+                                .clipped())
+                            .clipShape(RoundedRectangle(cornerRadius: 32))
+                    }
+                    
+                    .padding(.vertical, 20.0)
+                    
+                   
+                    
+                    
+                    
+                    
+                    HStack{
+                        Rectangle()
+                            .frame(width: 50, height: 3)
+                            .foregroundColor(Color(red: 1, green: 1, blue: 1, opacity: 0.0))
+                            .padding(2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(red: 1, green: 1, blue: 1, opacity: 0.3)))
+                        
+                        Rectangle()
+                        
+                            .frame(width: 50, height: 3)
+                            .padding(2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(.white))
+                        
+                        
+                    }
+                    .padding(30)
+                    
+                    //bottom progress
+                    
+                    
+                    
+                    
+                    
+                }
+            }
+            
+            
+            
+            .ignoresSafeArea()
+            .edgesIgnoringSafeArea(.all)
+            .navigationTitle("Smart Time Out")
+            
+            
+            .navigationBarTitleDisplayMode(.inline)
+            
+        
+            
+            .navigationBarItems(
+                                trailing: NavigationLink(
+                                    destination: ContentView()
+                                        .navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                                    label: {
+                                        Image(systemName: "xmark")
+                                            .foregroundColor(.white)
+                                    }
+                                )
+                            )
+            .navigationBarItems(
+                                leading: NavigationLink(
+                                    destination: Timeout1()
+                                        .navigationBarHidden(false).navigationBarBackButtonHidden(true),
+                                    label: {
+                                        Image(systemName: "info.circle")
+                                            .foregroundColor(.white)
+                                    }
+                                )
+                            )
+            
+            
+            
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
+        
+        
+        
+    }
+    
+    
 }
+
+
 
